@@ -71,7 +71,14 @@ export default function MobileNavbar() {
           }`}
         ></span>
       </button>
-      {isOpen && <MenuDropDown close={() => toggleDrawer()} />}
+      {isOpen && (
+        <MenuDropDown
+          removeClass={() => {
+            navAnimationClass = "";
+          }}
+          close={() => toggleDrawer()}
+        />
+      )}
     </section>
   );
 }

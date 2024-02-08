@@ -18,7 +18,7 @@ import { productSubMenuLinks, resourcesSubMenuLinks } from "../NavlinksData";
 import Image from "next/image";
 import ThemeSwitch from "../ThemeSwitch";
 
-export default function MenuDropDown({ close }) {
+export default function MenuDropDown({ close, removeClass }) {
   const [opacity, setOpacity] = useState(0);
   const [pos, setPos] = useState("translateY(-150%)");
   const { theme, updateTheme } = useTheme();
@@ -81,6 +81,7 @@ export default function MenuDropDown({ close }) {
       {/* Links */}
       <div className="w-[90%] mt-5 overflow-x-hidden scroll-hidden overflow-y-auto h-[calc(100dvh-80px)] mx-auto items-center flex flex-col gap-7 py-8">
         <Link
+          onClick={removeClass}
           href="/login"
           className={`w-full ${
             theme === "Light" ? "text-black" : "text-white"
@@ -89,6 +90,7 @@ export default function MenuDropDown({ close }) {
           Log In
         </Link>
         <Link
+          onClick={removeClass}
           href="/register"
           className={`w-full  flex text-sm font-medium text-black bg-darkGold justify-center items-center min-h-[41px] rounded border border-darkGold `}
         >

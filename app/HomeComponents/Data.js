@@ -104,14 +104,14 @@ export const customerReviewData = [
     company: "HARLY INCORPORATION",
     userImage: SodiqDavid,
     message:
-      "Switching to Hostshift was a smart move. The performance, security, and support are top-notch. Zero downtime, user-friendly interface—highly recommend!",
+      "Switching to HostShifts was a smart move. The performance, security, and support are top-notch. Zero downtime, user-friendly interface—highly recommend!",
   },
   {
     userName: "Sodiq David",
     company: "HARLY INCORPORATION",
     userImage: SodiqDavid,
     message:
-      "Switching to Hostshift was a smart move. The performance, security, and support are top-notch. Zero downtime, user-friendly interface—highly recommend!",
+      "Switching to HostShifts was a smart move. The performance, security, and support are top-notch. Zero downtime, user-friendly interface—highly recommend!",
   },
 ];
 
