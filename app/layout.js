@@ -6,9 +6,28 @@ import { ThemeProvider } from "./Contexts/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export const metadata = {
-  title: "HostShifts",
-  description: "",
+  title: 'Hosting at it best | HOSTSHIFTS',
+  description: 'Secure & Scalable Hosting for Your Digital Success',
+  openGraph: {
+    title: 'Hosting at it best | HOSTSHIFTS',
+    description: 'Secure & Scalable Hosting for Your Digital Success',
+    url: 'https://www.hostshifts.com',
+    siteName: 'hostshifts',
+    images: [
+      {
+        url: '/logo.jpg',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.hostshifts.com',
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -17,7 +36,7 @@ export default function RootLayout({ children }) {
       <head>
         <link
           rel="icon"
-          href="https://www.hostshifts.com/logo.png"
+          href="https://www.hostshifts.com/logo.jpg"
           sizes="any"
         />
       </head>
