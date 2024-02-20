@@ -26,7 +26,7 @@ export default function DevelopmentTools() {
           Supported Development Tools
         </h3>
         <p
-          className={`md:font-medium text-center md:leading-8 md:w-[870px] w-[90%] md:text-base text-sm font-medium mb-20 ${
+          className={`md:font-medium text-center md:leading-8 w-[870px] max-w-[90%] md:text-base text-sm font-medium mb-20 ${
             theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >

@@ -7,7 +7,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/virtual";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Virtual } from "swiper/modules";
 
 //Data
@@ -27,11 +27,12 @@ export default function HostingPlan() {
   const { theme } = useTheme();
   const [perView, setPerView] = useState(1);
   const [current, setCurrent] = useState(0);
-  const swiper = useSwiper();
 
   const handleResize = () => {
     if (window.innerWidth <= 700) {
       setPerView(1);
+    } else if (window.innerWidth > 700 && window.innerWidth < 1000) {
+      setPerView(2);
     } else {
       setPerView(3);
     }
@@ -55,7 +56,7 @@ export default function HostingPlan() {
           <p className="text-xs font-medium text-gold500">Pricing</p>
         </div>
         <h3
-          className={`md:font-bold w-max md:text-[32px] leading-10 text-xl font-semibold mb-16 ${
+          className={`md:font-bold text-center md:text-[32px] leading-10 text-xl font-semibold mb-16 ${
             theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
@@ -90,7 +91,7 @@ export default function HostingPlan() {
                 isActive && setCurrent(index);
                 return (
                   <div
-                    className={`h-max mb-5 pt-6 pb-12 px-8 rounded-tl-lg rounded-tr-[100px] rounded-br-lg rounded-bl-[100px] flex flex-col items-center border w-[calc(100%-10px)] bg-transparent ${
+                    className={`h-max mb-5 pt-6 pb-12 px-8 rounded-tl-lg rounded-tr-[100px] rounded-br-lg rounded-bl-[100px] flex flex-col items-center border w-full md:w-[calc(100%-10px)] bg-transparent ${
                       theme === "Light"
                         ? "border-[#EFDAA4]"
                         : "border-[#5E4507]"
