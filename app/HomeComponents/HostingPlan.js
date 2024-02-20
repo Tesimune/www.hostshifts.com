@@ -46,14 +46,17 @@ export default function HostingPlan() {
 
   return (
     <section
-      className={`w-full duration-300 h-max py-16 ${
+      className={`w-full duration-300 h-max py-16 lg:pt-32 ${
         theme === "Light" ? "bg-white" : "bg-black"
       }`}
     >
       <div className="w-[90%] mx-auto flex flex-col items-center">
+        <div className="w-136 h-28 rounded-full flex mb-4 md:mb-8 justify-center items-center bg-gold500/10">
+          <p className="text-xs font-medium text-gold500">Pricing</p>
+        </div>
         <h3
-          className={`md:font-bold text-center w-full md:w-[519px] md:text-4xl text-xl font-semibold mb-4 md:mb-8 ${
-            theme === "Light" ? "text-black" : "text-white"
+          className={`md:font-bold w-max md:text-[32px] leading-10 text-xl font-semibold mb-16 ${
+            theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
           Discover the Perfect Hosting Plan for You
@@ -74,7 +77,7 @@ export default function HostingPlan() {
         <Swiper
           className="w-full z-10"
           modules={[A11y, Virtual]}
-          spaceBetween={30}
+          spaceBetween={5}
           slidesPerView={perView}
           virtual
 
@@ -87,14 +90,24 @@ export default function HostingPlan() {
                 isActive && setCurrent(index);
                 return (
                   <div
-                    className={`h-max mb-5 rounded-lg p-5 flex flex-col items-center shadow-xl w-[calc(100%-10px)] bg-white ${
-                      theme === "Light" ? "border border-black" : "border-none"
+                    className={`h-max mb-5 pt-6 pb-12 px-8 rounded-tl-lg rounded-tr-[100px] rounded-br-lg rounded-bl-[100px] flex flex-col items-center border w-[calc(100%-10px)] bg-transparent ${
+                      theme === "Light"
+                        ? "border-[#EFDAA4]"
+                        : "border-[#5E4507]"
                     }`}
                   >
-                    <h4 className="text-center font-semibold text-3xl text-black mb-3">
+                    <h4
+                      className={`text-center font-semibold text-3xl ${
+                        theme === "Light" ? "text-gray300" : "text-white"
+                      } mb-3`}
+                    >
                       {item.name}
                     </h4>
-                    <p className="text-sm font-medium text-black mb-1 text-center">
+                    <p
+                      className={`text-sm font-medium text-black mb-1 text-center ${
+                        theme === "Light" ? "text-gray300" : "text-white"
+                      }`}
+                    >
                       Basically all you need to create your website
                     </p>
                     <p className="w-full justify-center items-center font-medium text-black mb-3 text-center flex">
@@ -103,16 +116,16 @@ export default function HostingPlan() {
                     </p>
                     <Link
                       href={""}
-                      className={`mx-auto w-[90%] text-base font-semibold flex justify-center items-center mb-5 rounded-md h-14 ${
-                        item.name === "Premium"
-                          ? "text-white bg-black"
-                          : "text-black bg-gold500"
-                      }`}
+                      className={`mx-auto w-[90%] text-base font-semibold flex justify-center items-center mb-5 rounded-full duration-300 hover:scale-105 h-48 bg-gold500 text-white`}
                     >
                       Get Started
                     </Link>
-                    <div className="w-full border-b border-black mb-6"></div>
-                    <p className="w-full mb-5 font-bold text-lg">
+                    <div className="w-full border-b border-[#e5e5e5] mb-6"></div>
+                    <p
+                      className={`${
+                        theme === "Light" ? "text-gray300" : "text-white"
+                      } w-full mb-5 font-bold text-lg`}
+                    >
                       Top Features
                     </p>
                     <div className="w-full flex flex-col gap-4">
@@ -122,13 +135,34 @@ export default function HostingPlan() {
                             className="w-full flex items-start gap-2"
                             key={crypto.randomUUID()}
                           >
-                            <FontAwesomeIcon icon={faCheckCircle} />
-                            <p className="text-lg font-medium">{topFeature}</p>
+                            <FontAwesomeIcon
+                              icon={faCheckCircle}
+                              color={
+                                theme === "Light"
+                                  ? "text-gray300"
+                                  : "text-white"
+                              }
+                            />
+                            <p
+                              className={`${
+                                theme === "Light"
+                                  ? "text-gray300"
+                                  : "text-white"
+                              } text-lg font-medium`}
+                            >
+                              {topFeature}
+                            </p>
                           </div>
                         );
                       })}
                     </div>
-                    <p className="w-full my-5 font-bold text-lg">Security</p>
+                    <p
+                      className={`w-full my-5 font-bold text-lg ${
+                        theme === "Light" ? "text-gray300" : "text-white"
+                      }`}
+                    >
+                      Security
+                    </p>
                     <div className="w-full flex flex-col gap-4">
                       {item.security.map((security) => {
                         return (
@@ -136,8 +170,23 @@ export default function HostingPlan() {
                             className="w-full flex items-start gap-2"
                             key={crypto.randomUUID()}
                           >
-                            <FontAwesomeIcon icon={faCheckCircle} />
-                            <p className="text-lg font-medium">{security}</p>
+                            <FontAwesomeIcon
+                              icon={faCheckCircle}
+                              color={
+                                theme === "Light"
+                                  ? "text-gray300"
+                                  : "text-white"
+                              }
+                            />
+                            <p
+                              className={`text-lg font-medium ${
+                                theme === "Light"
+                                  ? "text-gray300"
+                                  : "text-white"
+                              }`}
+                            >
+                              {security}
+                            </p>
                           </div>
                         );
                       })}

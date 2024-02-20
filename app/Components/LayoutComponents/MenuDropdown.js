@@ -21,7 +21,7 @@ import ThemeSwitch from "../ThemeSwitch";
 export default function MenuDropDown({ close, removeClass }) {
   const [opacity, setOpacity] = useState(0);
   const [pos, setPos] = useState("translateY(-150%)");
-  const { theme, updateTheme } = useTheme();
+  const { theme } = useTheme();
   const [selectedMenu, setSelectedMenu] = useState("");
 
   useEffect(() => {
@@ -83,16 +83,14 @@ export default function MenuDropDown({ close, removeClass }) {
         <Link
           onClick={removeClass}
           href="/login"
-          className={`w-full ${
-            theme === "Light" ? "text-black" : "text-white"
-          } flex text-sm font-medium justify-center items-center min-h-[41px] rounded border border-darkGold `}
+          className={`w-full text-gold500 flex text-base font-semibold justify-center items-center min-h-[48px] rounded border border-gold500 `}
         >
           Log In
         </Link>
         <Link
           onClick={removeClass}
           href="/register"
-          className={`w-full  flex text-sm font-medium text-black bg-darkGold justify-center items-center min-h-[41px] rounded border border-darkGold `}
+          className={`w-full  flex text-base font-semibold text-white bg-gold500 justify-center items-center min-h-[48px] rounded  `}
         >
           Sign Up
         </Link>
@@ -100,8 +98,8 @@ export default function MenuDropDown({ close, removeClass }) {
           <div
             onClick={() => toggleSelectedMenu("Product")}
             className={`${
-              theme === "Light" ? "text-black" : "text-white"
-            } text-sm cursor-pointer font-bold flex justify-between items-center`}
+              theme === "Light" ? "text-gray200" : "text-gray100"
+            } text-base cursor-pointer font-bold flex justify-between items-center`}
           >
             Product
             <span
@@ -109,7 +107,7 @@ export default function MenuDropDown({ close, removeClass }) {
                 selectedMenu === "Product" ? "rotate-90" : "rotate-0"
               }`}
             >
-              <FontAwesomeIcon icon={faAngleRight} />
+              <FontAwesomeIcon icon={faAngleRight} fontSize={16} />
             </span>
           </div>
 
@@ -124,7 +122,7 @@ export default function MenuDropDown({ close, removeClass }) {
                   key={crypto.randomUUID()}
                   href={item.path}
                   className={`${
-                    theme === "Light" ? "text-black" : "text-white"
+                    theme === "Light" ? "text-gray200" : "text-gray100"
                   } text-xs font-medium`}
                 >
                   {item.name}
@@ -137,8 +135,8 @@ export default function MenuDropDown({ close, removeClass }) {
           <div
             onClick={() => toggleSelectedMenu("Resources")}
             className={`${
-              theme === "Light" ? "text-black" : "text-white"
-            } text-sm cursor-pointer font-bold flex justify-between items-center`}
+              theme === "Light" ? "text-gray200" : "text-gray100"
+            } text-base cursor-pointer font-bold flex justify-between items-center`}
           >
             Resources
             <span
@@ -146,7 +144,7 @@ export default function MenuDropDown({ close, removeClass }) {
                 selectedMenu === "Resources" ? "rotate-90" : "rotate-0"
               }`}
             >
-              <FontAwesomeIcon icon={faAngleRight} />
+              <FontAwesomeIcon icon={faAngleRight} fontSize={16} />
             </span>
           </div>
 
@@ -158,7 +156,7 @@ export default function MenuDropDown({ close, removeClass }) {
             {" "}
             <p
               className={`${
-                theme === "Light" ? "text-black" : "text-white"
+                theme === "Light" ? "text-gray200" : "text-gray100"
               } text-sm font-semibold`}
             >
               Resources
@@ -169,7 +167,7 @@ export default function MenuDropDown({ close, removeClass }) {
                   key={crypto.randomUUID()}
                   href={item.path}
                   className={`${
-                    theme === "Light" ? "text-black" : "text-white"
+                    theme === "Light" ? "text-gray200" : "text-gray100"
                   } text-xs font-medium pl-2`}
                 >
                   {item.name}
@@ -178,7 +176,7 @@ export default function MenuDropDown({ close, removeClass }) {
             })}
             <p
               className={`${
-                theme === "Light" ? "text-black" : "text-white"
+                theme === "Light" ? "text-gray200" : "text-gray100"
               } text-sm font-semibold pt-4`}
             >
               About Us
@@ -189,7 +187,7 @@ export default function MenuDropDown({ close, removeClass }) {
                   key={crypto.randomUUID()}
                   href={item.path}
                   className={`${
-                    theme === "Light" ? "text-black" : "text-white"
+                    theme === "Light" ? "text-gray200" : "text-gray100"
                   } text-xs font-medium pl-2`}
                 >
                   {item.name}
@@ -201,24 +199,17 @@ export default function MenuDropDown({ close, removeClass }) {
         <Link
           href=""
           className={`${
-            theme === "Light" ? "text-black" : "text-white"
-          } text-sm font-bold w-full`}
+            theme === "Light" ? "text-gray200" : "text-gray100"
+          } text-base font-bold w-full`}
         >
           Doc
         </Link>
+
         <Link
           href=""
           className={`${
-            theme === "Light" ? "text-black" : "text-white"
-          } text-sm font-bold w-full`}
-        >
-          Solutions
-        </Link>
-        <Link
-          href=""
-          className={`${
-            theme === "Light" ? "text-black" : "text-white"
-          } text-sm font-bold w-full`}
+            theme === "Light" ? "text-gray200" : "text-gray100"
+          } text-base font-bold w-full`}
         >
           Pricing
         </Link>

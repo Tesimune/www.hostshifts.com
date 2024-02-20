@@ -41,7 +41,7 @@ export default function MobileNavbar() {
   }, [pathname]);
 
   return (
-    <section className="w-[90%] mx-auto desktop:hidden flex h-41 justify-between items-center">
+    <section className="w-[90%] relative mx-auto desktop:hidden flex h-41 justify-between items-center">
       <Link href="/" className="">
         <Image
           src={theme === "Light" ? LightThemeLogo : DarkThemeLogo}

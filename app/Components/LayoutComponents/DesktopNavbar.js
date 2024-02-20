@@ -17,23 +17,23 @@ import DarkThemeLogo from "@/public/images/DarkMode/logo.png";
 import { productSubMenuLinks, resourcesSubMenuLinks } from "../NavlinksData";
 
 export default function DesktopNavbar() {
-  const { theme, updateTheme } = useTheme();
+  const { theme } = useTheme();
   return (
-    <section className="desktop:w-[90%] mx-auto hidden desktop:flex h-41 justify-between items-center">
-      <Link href="/">
+    <section className="desktop:w-[90%] relative  mx-auto hidden desktop:flex h-41 justify-between items-center">
+      <Link href="/" className="z-50">
         <Image
           src={theme === "Light" ? LightThemeLogo : DarkThemeLogo}
           alt="Logo"
         />
       </Link>
-      <div className="flex gap-12">
+      <div className="flex gap-12 z-50">
         <div className="relative cursor-pointer hover-dropDown">
           <p
             className={`${
-              theme === "Light" ? "text-black" : "text-white"
-            } text-sm font-medium flex items-center gap-1`}
+              theme === "Light" ? "text-gray200" : "text-gray100"
+            }  text-base  font-medium flex items-center gap-2`}
           >
-            Product <FontAwesomeIcon icon={faAngleDown} size="sm" />
+            Product <FontAwesomeIcon icon={faAngleDown} size="base" />
           </p>
           <div
             className={`${
@@ -46,7 +46,7 @@ export default function DesktopNavbar() {
                   key={crypto.randomUUID()}
                   href={item.path}
                   className={`${
-                    theme === "Light" ? "text-black" : "text-white"
+                    theme === "Light" ? "text-gray200" : "text-gray100"
                   } text-sm font-medium`}
                 >
                   {item.name}
@@ -58,10 +58,10 @@ export default function DesktopNavbar() {
         <div className="relative cursor-pointer hover-dropDown">
           <p
             className={`${
-              theme === "Light" ? "text-black" : "text-white"
-            } text-sm font-medium flex items-center gap-1`}
+              theme === "Light" ? "text-gray200" : "text-gray100"
+            } text-base font-medium flex items-center gap-2`}
           >
-            Resources <FontAwesomeIcon icon={faAngleDown} size="sm" />
+            Resources <FontAwesomeIcon icon={faAngleDown} size="base" />
           </p>
           <div
             className={`${
@@ -71,7 +71,7 @@ export default function DesktopNavbar() {
             <div className="w-[46%] flex flex-col gap-3">
               <p
                 className={`${
-                  theme === "Light" ? "text-black" : "text-white"
+                  theme === "Light" ? "text-gray200" : "text-gray100"
                 } text-sm font-semibold`}
               >
                 Resources
@@ -82,7 +82,7 @@ export default function DesktopNavbar() {
                     key={crypto.randomUUID()}
                     href={item.path}
                     className={`${
-                      theme === "Light" ? "text-black" : "text-white"
+                      theme === "Light" ? "text-gray200" : "text-gray100"
                     } text-sm font-medium`}
                   >
                     {item.name}
@@ -93,7 +93,7 @@ export default function DesktopNavbar() {
             <div className="w-[46%] flex flex-col gap-3">
               <p
                 className={`${
-                  theme === "Light" ? "text-black" : "text-white"
+                  theme === "Light" ? "text-gray200" : "text-gray100"
                 } text-sm font-semibold`}
               >
                 About Us
@@ -104,7 +104,7 @@ export default function DesktopNavbar() {
                     key={crypto.randomUUID()}
                     href={item.path}
                     className={`${
-                      theme === "Light" ? "text-black" : "text-white"
+                      theme === "Light" ? "text-gray200" : "text-gray100"
                     } text-sm font-medium`}
                   >
                     {item.name}
@@ -117,42 +117,33 @@ export default function DesktopNavbar() {
         <Link
           href=""
           className={`${
-            theme === "Light" ? "text-black" : "text-white"
-          } text-sm font-medium`}
+            theme === "Light" ? "text-gray200" : "text-gray100"
+          } text-base font-medium`}
         >
           Doc
         </Link>
+
         <Link
           href=""
           className={`${
-            theme === "Light" ? "text-black" : "text-white"
-          } text-sm font-medium`}
-        >
-          Solutions
-        </Link>
-        <Link
-          href=""
-          className={`${
-            theme === "Light" ? "text-black" : "text-white"
-          } text-sm font-medium`}
+            theme === "Light" ? "text-gray200" : "text-gray100"
+          } text-base font-medium`}
         >
           Pricing
         </Link>
       </div>
-      <div className="flex items-center gap-4">
-        <Link
-          href="/login"
-          className={`h-41 w-84 flex justify-center items-center rounded-md border border-darkGold text-sm font-medium ${
-            theme === "Light" ? "bg-white text-black" : "bg-black text-white"
-          }`}
-        >
-          Log In
-        </Link>
+      <div className="flex items-center gap-4 z-50">
         <Link
           href="/register"
-          className="h-41 w-84 flex justify-center bg-darkGold items-center text-black rounded-md border border-darkGold text-sm font-medium"
+          className="h-48 w-148 duration-300 hover:scale-105 rounded-full flex justify-center bg-gold500 items-center text-white text-base font-semibold"
         >
           Sign Up
+        </Link>
+        <Link
+          href="/login"
+          className={`h-48 w-148 flex duration-300 hover:scale-105 justify-center items-center rounded-full border border-gold500 text-base font-semibold bg-transparent text-gold500`}
+        >
+          Log In
         </Link>
       </div>
     </section>

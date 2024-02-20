@@ -10,39 +10,42 @@ export default function DevelopmentTools() {
 
   return (
     <section
-      className={`w-full duration-300 h-max py-16 ${
-        theme === "Light" ? "bg-Grey" : "bg-darkModeGrey"
+      className={`w-full duration-300 h-max py-16 lg:pt-32 ${
+        theme === "Light" ? "bg-white" : "bg-black"
       }`}
     >
-      <div className="w-[90%] desktop:w-[80%] mx-auto flex flex-col items-center">
+      <div className="w-[90%] desktop:w-[85%] mx-auto flex flex-col items-center">
+        <div className="w-136 h-28 rounded-full flex mb-4 md:mb-8 justify-center items-center bg-gold500/10">
+          <p className="text-xs font-medium text-gold500">Tools</p>
+        </div>
         <h3
-          className={`md:font-bold w-max md:text-4xl text-xl font-semibold mb-4 md:mb-8 ${
-            theme === "Light" ? "text-black" : "text-white"
+          className={`md:font-bold w-max md:text-[32px] leading-10 text-xl font-semibold mb-4 md:mb-8 ${
+            theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
           Supported Development Tools
         </h3>
         <p
-          className={`md:font-medium text-center md:w-full w-[90%] md:text-base text-sm font-normal mb-7 ${
-            theme === "Light" ? "text-black" : "text-white"
+          className={`md:font-medium text-center md:leading-8 md:w-[870px] w-[90%] md:text-base text-sm font-medium mb-20 ${
+            theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
           Build your website using these open-source applications and tools,
           designed to seamlessly work with a diverse array of programming
           languages.
         </p>
-        <div className="md:w-[90%] w-full grid md:grid-cols-3 desktop:grid-cols-5 grid-cols-2 md:gap-x-6 md:gap-y-6 gap-x-3 gap-y-3">
+        <div className="md:w-[90%] w-full flex justify-center flex-wrap md:gap-x-10 md:gap-y-10 gap-x-5 gap-y-5 tool-box">
           {developmentToolsData.map((item) => {
             return (
               <div
                 key={crypto.randomUUID()}
-                className={`w-full h-202 rounded-md border duration-300 p-3 md:p-5 flex flex-col justify-center items-center gap-2 ${
+                className={` h-244 w-[calc(50%-10px)] md:w-[calc(33.2%-26.6px)] desktop:w-[calc(25%-30px)] box-border rounded-2xl border duration-300 p-3 md:p-5 flex flex-col justify-center items-center gap-2 ${
                   theme === "Light"
-                    ? "border-black bg-white"
-                    : "border-white bg-transparent"
+                    ? "border-[#EFDAA4] bg-white"
+                    : "border-[#5E4507] bg-transparent"
                 }`}
               >
-                <div className="w-auto h-[60%]">
+                <div className="w-auto h-[58%]">
                   <Image src={item.img} alt="Logo" />
                 </div>
                 <p

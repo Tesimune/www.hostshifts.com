@@ -15,17 +15,6 @@ export default function AuthenticationLayout({ children }) {
         theme === "Light" ? "bg-white" : "bg-gold500"
       }`}
     >
-      {/* TOP BAR */}
-      <div
-        className={`w-full duration-300 flex justify-center items-center bg-black h-50`}
-      >
-        <p
-          className={`text-white font-semibold lg:font-bold text-xs lg:text-sm`}
-        >
-          This is an announcement tagline for you to insert
-        </p>
-      </div>
-
       <div className="w-[90%] mx-auto flex h-[60px] items-center">
         <Link href="/">
           <Image
