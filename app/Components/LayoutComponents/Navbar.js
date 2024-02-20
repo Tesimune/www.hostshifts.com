@@ -8,18 +8,21 @@ export default function NavBar() {
   const { theme } = useTheme();
   const [bg, setBg] = useState("transparent");
 
-  const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setBg(theme === "Light" ? "white" : "black");
-    } else {
-      setBg("transparent");
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setBg(theme === "Light" ? "white" : "black");
+      } else {
+        setBg("transparent");
+      }
+    };
+
     handleScroll();
     window.addEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [theme]);
 
   return (
     <nav
