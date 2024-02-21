@@ -44,7 +44,11 @@ export default function FreequentlyAskedQuestion() {
                 key={item.question}
                 className={`w-full flex flex-col overflow-hidden bg-transparent rounded-3xl duration-300 border ${
                   theme === "Light" ? "border-[#F6ECD3]" : "border-[#5E4507]"
-                } ${selected === item.question ? "h-[250px]" : "h-[105px]"}`}
+                } ${
+                  selected === item.question
+                    ? "h-[300px] md:h-[250px]"
+                    : "h-[105px]"
+                }`}
               >
                 <div
                   onClick={() => {
@@ -61,7 +65,7 @@ export default function FreequentlyAskedQuestion() {
                       src={theme === "Light" ? LightModePencil : DarkModePencil}
                     />
                     <p
-                      className={`md:text-xl md:leading-9 w-[90%] text-sm leading-7 font-normal ${
+                      className={`md:text-xl md:leading-9 w-[90%] text-sm leading-6 font-normal ${
                         theme === "Light" ? "text-gray300" : "text-white"
                       } `}
                     >
@@ -81,12 +85,16 @@ export default function FreequentlyAskedQuestion() {
 
                 <div
                   className={` ${
-                    selected === item.question ? "h-[145px]" : "h-0 "
+                    selected === item.question
+                      ? "h-[195px] md:h-[145px]"
+                      : "h-0 "
                   } px-3 mb-3   md:px-6 w-full`}
                 >
                   <p
                     className={`md:text-base border-t flex overflow-hidden items-center px-3 md:px-6 text-xs font-normal md:leading-6 ${
-                      selected === item.question ? "h-[130px]" : "h-0 "
+                      selected === item.question
+                        ? "h-[180px] md:h-[130px]"
+                        : "h-0 "
                     } ${
                       theme === "Light"
                         ? "text-[#696969] border-[#F6ECD3]"

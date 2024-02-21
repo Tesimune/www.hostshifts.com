@@ -12,7 +12,7 @@ export default function AuthenticationLayout({ children }) {
   return (
     <main
       className={`w-full pb-8 duration-300 h-auto min-h-[100dvh] ${
-        theme === "Light" ? "bg-white" : "bg-gold500"
+        theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
     >
       <div className="w-[90%] mx-auto flex h-[60px] items-center">

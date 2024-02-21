@@ -16,7 +16,9 @@ export default function GuestLayout({ children }) {
   }, [theme]);
 
   return (
-    <main className="w-full">
+    <main
+      className={`w-full ${theme === "Light" ? "bg-white" : "bg-darkModeBg"}`}
+    >
       {/* NAVIGATION BAR */}
       <NavBar />
 
