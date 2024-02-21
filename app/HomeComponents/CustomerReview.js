@@ -50,7 +50,7 @@ export default function CustomerReview() {
               return (
                 <SplideSlide
                   key={crypto.randomUUID}
-                  className="w-full  flex justify-center pb-14"
+                  className="w-full flex justify-center pb-14"
                 >
                   <div
                     className={`w-[85%] py-14 px-5 flex flex-col items-center bg-transparent border border-[#EDDDB7] rounded-[32px]`}
