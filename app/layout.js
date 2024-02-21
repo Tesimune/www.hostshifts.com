@@ -1,11 +1,13 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 // Contexts
 import { ThemeProvider } from "./Contexts/ThemeContext";
 
-const inter = Inter({
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  fallback: "Loading...",
 });
 
 export const metadata = {
@@ -41,7 +43,7 @@ export default function RootLayout({ children }) {
           sizes="any"
         />
       </head>
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

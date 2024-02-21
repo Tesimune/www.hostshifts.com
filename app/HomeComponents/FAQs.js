@@ -91,7 +91,7 @@ export default function FreequentlyAskedQuestion() {
                   } px-3 mb-3   md:px-6 w-full`}
                 >
                   <p
-                    className={`md:text-base border-t flex overflow-hidden items-center px-3 md:px-6 text-xs font-normal md:leading-6 ${
+                    className={`md:text-base leading-[25px] border-t flex overflow-hidden items-center px-3 md:px-6 text-xs font-normal md:leading-6 ${
                       selected === item.question
                         ? "h-[180px] md:h-[130px]"
                         : "h-0 "
