@@ -46,7 +46,7 @@ export default function FreequentlyAskedQuestion() {
                   theme === "Light" ? "border-[#F6ECD3]" : "border-[#5E4507]"
                 } ${
                   selected === item.question
-                    ? "h-[300px] md:h-[250px]"
+                    ? "h-[310px] md:h-[250px]"
                     : "h-[105px]"
                 }`}
               >
@@ -86,14 +86,14 @@ export default function FreequentlyAskedQuestion() {
                 <div
                   className={` ${
                     selected === item.question
-                      ? "h-[195px] md:h-[145px]"
+                      ? "h-[205px] md:h-[145px]"
                       : "h-0 "
                   } px-3 mb-3   md:px-6 w-full`}
                 >
                   <p
-                    className={`md:text-base leading-[25px] border-t flex overflow-hidden items-center px-3 md:px-6 text-xs font-normal md:leading-6 ${
+                    className={`md:text-base overflow-y-auto leading-[25px] border-t flex items-center px-3 md:px-6 text-xs font-normal md:leading-6 ${
                       selected === item.question
-                        ? "h-[180px] md:h-[130px]"
+                        ? "h-[190px] md:h-[130px]"
                         : "h-0 "
                     } ${
                       theme === "Light"
