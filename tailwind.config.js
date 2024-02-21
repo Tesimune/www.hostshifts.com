@@ -46,7 +46,7 @@ module.exports = {
         darkGray: "#555555",
         darkGray200: "#1b1b1b",
         Grey: "#F6F6F6",
-        darkModeGrey: "#1B1B1B",
+        darkModeBg: "#130E00",
         gold500: "#D3A121",
       },
       borderColor: {

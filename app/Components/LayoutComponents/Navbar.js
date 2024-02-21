@@ -3,15 +3,17 @@ import { useEffect, useState } from "react";
 import { useTheme } from "../../Contexts/ThemeContext";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
+  const pathname = usePathname();
   const { theme } = useTheme();
-  const [bg, setBg] = useState("transparent");
+  const [bg, setBg] = useState(theme === "Light" ? "white" : "#130E00");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setBg(theme === "Light" ? "white" : "black");
+      if ((pathname === "/" && window.scrollY > 100) || pathname !== "/") {
+        setBg(theme === "Light" ? "white" : "#130E00");
       } else {
         setBg("transparent");
       }

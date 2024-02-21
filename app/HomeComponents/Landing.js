@@ -27,8 +27,9 @@ export default function Landing() {
 
   return (
     <section
+      data-aos="fade-up"
       className={`w-full duration-300 z-30 h-700 lg:h-808 py-16 ${
-        theme === "Light" ? "bg-white" : "bg-black"
+        theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
     >
       <div className="w-[90%] z-0 h-700 lg:h-808  left-[5%] absolute top-0">

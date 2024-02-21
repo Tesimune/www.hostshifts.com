@@ -11,20 +11,20 @@ export default function ContactForm() {
   return (
     <section
       className={`w-full duration-300 h-max py-16 ${
-        theme === "Light" ? "bg-white" : "bg-black"
+        theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
     >
       <div className="w-[90%] mx-auto flex flex-col items-center">
         <h3
           className={`md:font-bold text-center w-full md:w-[519px] md:text-4xl text-xl font-semibold mb-4 md:mb-7 ${
-            theme === "Light" ? "text-black" : "text-white"
+            theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
           How can we assist you?
         </h3>
         <p
           className={`md:font-medium text-center w-full md:w-[80%] md:text-base text-sm font-normal mb-7 ${
-            theme === "Light" ? "text-black" : "text-white"
+            theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
           We are here for you 24/7. Our Customer Support Team is called that way
@@ -35,7 +35,7 @@ export default function ContactForm() {
           <div className="w-full desktop:w-[calc(50%-10px)] flex flex-col gap-y-2">
             <p
               className={`${
-                theme === "Light" ? "text-black" : "text-white"
+                theme === "Light" ? "text-gray300" : "text-white"
               } md:text-xl text-base font-semibold`}
             >
               Name
@@ -44,7 +44,7 @@ export default function ContactForm() {
               type="text"
               className={`w-full px-3 bg-transparent md:h-61 outline-none text-sm md:text-base font-medium h-50 border ${
                 theme === "Light"
-                  ? "border-black text-black"
+                  ? "border-gold500 text-gray300"
                   : "border-white text-white"
               }`}
             />
@@ -52,7 +52,7 @@ export default function ContactForm() {
           <div className="w-full desktop:w-[calc(50%-10px)] flex flex-col gap-y-2">
             <p
               className={`${
-                theme === "Light" ? "text-black" : "text-white"
+                theme === "Light" ? "text-gray300" : "text-white"
               } md:text-xl text-base font-semibold`}
             >
               Email
@@ -61,7 +61,7 @@ export default function ContactForm() {
               type="email"
               className={`w-full px-3 bg-transparent md:h-61 outline-none text-sm md:text-base font-medium h-50 border ${
                 theme === "Light"
-                  ? "border-black text-black"
+                  ? "border-gold500 text-gray300"
                   : "border-white text-white"
               }`}
             />
@@ -69,7 +69,7 @@ export default function ContactForm() {
           <div className="w-full flex flex-col gap-y-2">
             <p
               className={`${
-                theme === "Light" ? "text-black" : "text-white"
+                theme === "Light" ? "text-gray300" : "text-white"
               } md:text-xl text-base font-semibold`}
             >
               Message
@@ -80,7 +80,7 @@ export default function ContactForm() {
               type="email"
               className={`w-full px-3 bg-transparent outline-none text-sm md:text-base font-medium h-108 border ${
                 theme === "Light"
-                  ? "border-black text-black"
+                  ? "border-gold500 text-gray300"
                   : "border-white text-white"
               }`}
             ></textarea>
@@ -88,7 +88,7 @@ export default function ContactForm() {
           <input
             type="submit"
             value="Submit"
-            className="h-41 cursor-pointer w-84 flex justify-center bg-darkGold items-center text-black rounded-md border border-darkGold text-sm font-medium"
+            className="h-41 cursor-pointer w-84 flex justify-center bg-gold500 items-center text-white border-none rounded-md  text-sm font-medium"
           />
         </form>
       </div>

@@ -1,39 +1,26 @@
 "use client";
-import Image from "next/image";
-import Hero from "@/public/images/customer-support.png";
 import { useTheme } from "@/app/Contexts/ThemeContext";
 
 export default function Landing() {
   const { theme } = useTheme();
   return (
     <section
-      className={`w-full duration-300 h-max py-16 ${
-        theme === "Light" ? "bg-Grey" : "bg-darkModeGrey"
+      data-aos="fade-up"
+      className={`w-full duration-300 h-max pb-16 pt-36 ${
+        theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
     >
-      <div className="w-[90%] mx-auto flex flex-col desktop:flex-row desktop:justify-between">
-        <div className="desktop:w-[calc(50%-50px)] w-full flex flex-col justify-center">
-          <span
-            className={`text-3xl desktop:text-[42px] desktop:leading-[45px] pb-5 font-extrabold ${
-              theme === "Light" ? "text-black" : "text-white"
-            }`}
-          >
-            Have Inquiries?
-            <br /> Let's Chat!
-          </span>
-          <p
-            className={`${
-              theme === "Light" ? "text-black" : "text-white"
-            } font-semibold pb-4`}
-          >
-            Need immediate assistance or have specific inquiries about our
-            hosting services? Look no further. Our Contact page is your gateway
-            to swift and personalized support.
-          </p>
+      <div className="desktop:w-[85%] w-[90%] mx-auto flex flex-col items-center">
+        <div className="w-136 h-28 rounded-full flex mb-4 md:mb-8 justify-center items-center bg-gold500/10">
+          <p className="text-xs font-medium text-gold500">Contact Us</p>
         </div>
-        <div className="desktop:w-6/12 w-full overflow-hidden">
-          <Image src={Hero} alt="Hero Image" />
-        </div>
+        <h1
+          className={`text-center w-[806px] mb-5 max-w-full font-bold md:text-6xl md:leading-[72px] text-4xl leading-[48px] ${
+            theme === "Light" ? "text-gray300" : "text-white"
+          }`}
+        >
+          Have Inquiries? <span className="text-gold500">Let's Chat!</span>
+        </h1>
       </div>
     </section>
   );

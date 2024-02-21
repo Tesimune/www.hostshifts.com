@@ -6,6 +6,7 @@ import DevelopmentTools from "./HomeComponents/DevelopmentTools";
 import HostingPlan from "./HomeComponents/HostingPlan";
 import CustomerReview from "./HomeComponents/CustomerReview";
 import FreequentlyAskedQuestion from "./HomeComponents/FAQs";
+import WhyChooseUs from "./HomeComponents/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Landing />
       <DevelopmentTools />
       <HostingPlan />
+      <WhyChooseUs />
       <CustomerReview />
       <FreequentlyAskedQuestion />
     </GuestLayout>

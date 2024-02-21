@@ -10,8 +10,9 @@ export default function DevelopmentTools() {
 
   return (
     <section
+      data-aos="fade-up"
       className={`w-full duration-300 h-max py-16 lg:pt-32 ${
-        theme === "Light" ? "bg-white" : "bg-black"
+        theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
     >
       <div className="w-[90%] desktop:w-[85%] mx-auto flex flex-col items-center">

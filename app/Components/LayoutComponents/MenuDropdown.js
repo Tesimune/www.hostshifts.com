@@ -41,7 +41,7 @@ export default function MenuDropDown({ close, removeClass }) {
     <div
       style={{ opacity: opacity, transform: pos }}
       className={`duration-500 fixed top-0 left-0 z-40 ${
-        theme === "Light" ? "bg-white" : "bg-black"
+        theme === "Light" ? "bg-white" : "bg-darkModeBg"
       } w-screen h-[100dvh] pb-8 pt-8 flex flex-col`}
     >
       {/* Logo */}

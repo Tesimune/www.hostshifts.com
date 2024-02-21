@@ -37,7 +37,7 @@ export default function DesktopNavbar() {
           </p>
           <div
             className={`${
-              theme === "Light" ? "bg-white" : "bg-black"
+              theme === "Light" ? "bg-white" : "bg-darkModeBg"
             } absolute w-40 rounded-lg shadow-xl mt-3 p-5 -left-16 duration-300 opacity-0 invisible top-[100%] flex flex-col gap-3`}
           >
             {productSubMenuLinks.map((item) => {
@@ -65,7 +65,7 @@ export default function DesktopNavbar() {
           </p>
           <div
             className={`${
-              theme === "Light" ? "bg-white" : "bg-black"
+              theme === "Light" ? "bg-white" : "bg-darkModeBg"
             } absolute mt-3 w-96 rounded-lg shadow-xl p-5 -left-40 duration-300 opacity-0 invisible top-[100%] flex justify-between`}
           >
             <div className="w-[46%] flex flex-col gap-3">

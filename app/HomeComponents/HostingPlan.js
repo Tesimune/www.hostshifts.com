@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "../Contexts/ThemeContext";
-import Image from "next/image";
 
 // Swiper
 import "swiper/css";
@@ -17,11 +16,6 @@ import Link from "next/link";
 // Icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
-
-// Images
-import CustomerSupport from "@/public/images/customer-support.png";
-import AffordablePricing from "@/public/images/affordable-pricing.png";
-import RobustSecurity from "@/public/images/robust-security.png";
 
 export default function HostingPlan() {
   const { theme } = useTheme();
@@ -47,8 +41,9 @@ export default function HostingPlan() {
 
   return (
     <section
+      data-aos="fade-right"
       className={`w-full duration-300 h-max py-16 lg:pt-32 ${
-        theme === "Light" ? "bg-white" : "bg-black"
+        theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
     >
       <div className="w-[90%] mx-auto flex flex-col items-center">
@@ -111,7 +106,11 @@ export default function HostingPlan() {
                     >
                       Basically all you need to create your website
                     </p>
-                    <p className="w-full justify-center items-center font-medium text-black mb-3 text-center flex">
+                    <p
+                      className={`w-full justify-center items-center font-medium mb-3 text-center flex ${
+                        theme === "Light" ? "text-gray300" : "text-white"
+                      }`}
+                    >
                       $<h1 className="text-[50px] font-bold">{item.price}/</h1>
                       mo
                     </p>
@@ -138,11 +137,9 @@ export default function HostingPlan() {
                           >
                             <FontAwesomeIcon
                               icon={faCheckCircle}
-                              color={
-                                theme === "Light"
-                                  ? "text-gray300"
-                                  : "text-white"
-                              }
+                              color={`${
+                                theme === "Light" ? "#393939" : "white"
+                              }`}
                             />
                             <p
                               className={`${
@@ -173,11 +170,9 @@ export default function HostingPlan() {
                           >
                             <FontAwesomeIcon
                               icon={faCheckCircle}
-                              color={
-                                theme === "Light"
-                                  ? "text-gray300"
-                                  : "text-white"
-                              }
+                              color={`${
+                                theme === "Light" ? "#393939" : "white"
+                              }`}
                             />
                             <p
                               className={`text-lg font-medium ${
@@ -198,153 +193,6 @@ export default function HostingPlan() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="pt-16 flex w-full flex-col gap-16 items-center">
-          <p
-            className={`text-2xl desktop:text-4xl text-center font-medium desktop:font-bold ${
-              theme === "Light" ? "text-black" : "text-white"
-            }`}
-          >
-            Why you should choose us
-          </p>
-          <div className="w-full flex gap-y-7 flex-col desktop:flex-row desktop:justify-between">
-            <div className="desktop:w-6/12 w-full flex flex-col justify-center">
-              <span
-                className={`text-xl desktop:text-2xl mb-3 font-semibold ${
-                  theme === "Light" ? "text-black" : "text-white"
-                }`}
-              >
-                24/7 Customer Support and Maintenance
-              </span>
-              <div className="w-full flex flex-col gap-2">
-                {[
-                  "Instant Issue Resolution",
-                  "Proactive Maintenance",
-                  "Unmatched Reliability",
-                  "Personalized Guidance",
-                  "Customer-Centric Approach",
-                ].map((item) => (
-                  <div
-                    className="w-full flex items-start gap-2"
-                    key={crypto.randomUUID()}
-                  >
-                    <FontAwesomeIcon
-                      color={`${theme === "Light" ? "black" : "white"}`}
-                      icon={faCheckCircle}
-                    />
-                    <p
-                      className={`text-base font-medium ${
-                        theme === "Light" ? "text-black" : "text-white"
-                      }`}
-                    >
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="desktop:w-5/12 w-full overflow-hidden">
-              <Image src={CustomerSupport} alt="Hero Image" />
-            </div>
-          </div>
-          <div className="w-full flex gap-y-7 flex-col-reverse desktop:flex-row desktop:justify-between">
-            <div className="desktop:w-5/12 w-full overflow-hidden">
-              <Image src={RobustSecurity} alt="Hero Image" />
-            </div>
-            <div className="desktop:w-6/12 w-full flex flex-col justify-center">
-              <span
-                className={`text-xl desktop:text-2xl mb-3 font-semibold ${
-                  theme === "Light" ? "text-black" : "text-white"
-                }`}
-              >
-                Robust Security for Your Website
-              </span>
-
-              <div className="w-full flex flex-col gap-2">
-                {[
-                  "Advanced Threat Detection",
-                  "SSL Encryption for Data Protection",
-
-                  "Firewall Protection",
-                  "DDoS Mitigation",
-                  "Constant Security Updates",
-                ].map((item) => (
-                  <div
-                    className="w-full flex items-start gap-2"
-                    key={crypto.randomUUID()}
-                  >
-                    <FontAwesomeIcon
-                      icon={faCheckCircle}
-                      color={`${theme === "Light" ? "black" : "white"}`}
-                    />
-                    <p
-                      className={`text-base font-medium ${
-                        theme === "Light" ? "text-black" : "text-white"
-                      }`}
-                    >
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex flex-col gap-y-7 desktop:flex-row desktop:justify-between">
-            <div className="desktop:w-6/12 w-full flex flex-col justify-center">
-              <span
-                className={`text-xl desktop:text-2xl mb-3 font-semibold ${
-                  theme === "Light" ? "text-black" : "text-white"
-                }`}
-              >
-                Affordable Pricing for Your Web Hosting Needs
-              </span>
-              <div className="w-full flex flex-col gap-2">
-                {[
-                  "Cost-Effective Hosting Solutions",
-                  "Scalability Without Extra Costs",
-                  "Flexible Billing Cycles",
-                  "No Hidden Fees",
-                  "Money-Back Guarantee",
-                ].map((item) => (
-                  <div
-                    className="w-full flex items-start gap-2"
-                    key={crypto.randomUUID()}
-                  >
-                    <FontAwesomeIcon
-                      color={`${theme === "Light" ? "black" : "white"}`}
-                      icon={faCheckCircle}
-                    />
-                    <p
-                      className={`text-base font-medium ${
-                        theme === "Light" ? "text-black" : "text-white"
-                      }`}
-                    >
-                      {item}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="desktop:w-5/12 w-full overflow-hidden">
-              <Image src={AffordablePricing} alt="Hero Image" />
-            </div>
-          </div>
-          <div className="w-[886px] desktop:flex flex-col items-center hidden mt-5">
-            <p
-              className={`text-3xl font-semibold leading-10 text-center mb-8 ${
-                theme === "Light" ? "text-black" : "text-white"
-              }`}
-            >
-              Don't Settle for Average Hosting. Elevate Your Website and Embrace
-              top level Security, Speed, and Support for Your Online Journey.
-            </p>
-            <Link
-              href={""}
-              className={` w-[279px] text-black bg-gold500 text-base font-semibold flex justify-center items-center rounded-md h-16`}
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -1,18 +1,19 @@
 "use client";
 import { useState } from "react";
+import Card from "./Card";
 import { useTheme } from "../Contexts/ThemeContext";
-import Link from "next/link";
 
 //Data
 import { faqsData } from "./Data";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleRight,
-  faMinus,
-  faPlus,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
+//Images
+import LightModePencil from "@/public/images/LightMode/Home/pencil.png";
+import DarkModePencil from "@/public/images/DarkMode/Home/pencil.png";
+import Image from "next/image";
 
 export default function FreequentlyAskedQuestion() {
   const { theme } = useTheme();
@@ -20,22 +21,31 @@ export default function FreequentlyAskedQuestion() {
 
   return (
     <section
-      className={`w-full flex justify-center duration-300 h-max pt-16 ${
-        theme === "Light" ? "bg-white" : "bg-black"
+      data-aos="fade-in"
+      className={`w-full flex justify-center duration-300 h-max py-16 lg:pt-32 ${
+        theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
     >
       <div className="w-[85%] flex flex-col items-center">
+        <div className="w-136 h-28 rounded-full flex mb-4 md:mb-8 justify-center items-center bg-gold500/10">
+          <p className="text-xs font-medium text-gold500">FAQ</p>
+        </div>
         <h3
-          className={`md:font-bold w-max md:text-4xl text-xl font-semibold mb-4 md:mb-8 ${
-            theme === "Light" ? "text-black" : "text-white"
+          className={`md:font-bold text-center md:text-[32px] leading-10 text-xl font-semibold mb-16 ${
+            theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
-          Freequently asked questions
+          Frequently Asked Questions
         </h3>
         <div className="w-full flex flex-col gap-5">
           {faqsData.map((item) => {
             return (
-              <div key={item.question} className="w-full flex flex-col gap-5">
+              <div
+                key={item.question}
+                className={`w-full flex flex-col overflow-hidden bg-transparent rounded-3xl duration-300 border ${
+                  theme === "Light" ? "border-[#F6ECD3]" : "border-[#5E4507]"
+                } ${selected === item.question ? "h-[250px]" : "h-[105px]"}`}
+              >
                 <div
                   onClick={() => {
                     if (selected === item.question) {
@@ -44,108 +54,57 @@ export default function FreequentlyAskedQuestion() {
                       setSelected(item.question);
                     }
                   }}
-                  className={`w-full cursor-pointer h-max flex items-center justify-between py-3 px-3.5 md:px-6 rounded-md ${
-                    selected === item.question
-                      ? "bg-gold500 border border-transparent"
-                      : "bg-transparent border border-[#131126]"
-                  }`}
+                  className={`w-full cursor-pointer min-h-[105px] flex items-center justify-between px-3.5 md:px-6 `}
                 >
-                  <p
-                    className={`md:text-lg w-[90%] text-base font-semibold md:font-bold ${
-                      selected === item.question && theme !== "Light"
-                        ? "text-black"
-                        : ""
-                    } ${
-                      selected !== item.question && theme !== "Light"
-                        ? "text-white"
-                        : ""
-                    } ${
-                      selected === item.question && theme === "Light"
-                        ? "text-white"
-                        : ""
-                    } ${
-                      selected !== item.question && theme === "Light"
-                        ? "text-black"
-                        : ""
-                    }`}
-                  >
-                    {item.question}
-                  </p>
-                  <p
-                    className={`md:text-lg text-base font-semibold md:font-bold ${
-                      selected === item.question && theme !== "Light"
-                        ? "text-black"
-                        : ""
-                    } ${
-                      selected !== item.question && theme !== "Light"
-                        ? "text-white"
-                        : ""
-                    } ${
-                      selected === item.question && theme === "Light"
-                        ? "text-white"
-                        : ""
-                    } ${
-                      selected !== item.question && theme === "Light"
-                        ? "text-black"
-                        : ""
-                    }`}
-                  >
-                    <FontAwesomeIcon
-                      icon={selected === item.question ? faMinus : faPlus}
+                  <div className="flex items-center w-[90%] md:w-[95%] gap-4">
+                    <Image
+                      src={theme === "Light" ? LightModePencil : DarkModePencil}
                     />
-                  </p>
-                </div>
-                {selected === item.question && (
-                  <div className="py-3 px-3.5 md:px-6 w-full">
                     <p
-                      className={`md:text-base text-sm font-medium leading-5 md:leading-6 ${
-                        theme === "Light" ? "text-black" : "text-white"
-                      }`}
+                      className={`md:text-xl md:leading-9 w-[90%] text-sm leading-7 font-normal ${
+                        theme === "Light" ? "text-gray300" : "text-white"
+                      } `}
                     >
-                      {item.answer}
+                      {item.question}
                     </p>
                   </div>
-                )}
+                  <p
+                    className={`md:text-lg text-base font-semibold md:font-bold duration-300 ${
+                      theme === "Light" ? "text-gray300" : "text-white"
+                    } ${
+                      item.question === selected ? "rotate-180" : "rotate-0"
+                    }`}
+                  >
+                    <FontAwesomeIcon icon={faAngleDown} />
+                  </p>
+                </div>
+
+                <div
+                  className={` ${
+                    selected === item.question ? "h-[145px]" : "h-0 "
+                  } px-3 mb-3   md:px-6 w-full`}
+                >
+                  <p
+                    className={`md:text-base border-t flex overflow-hidden items-center px-3 md:px-6 text-xs font-normal md:leading-6 ${
+                      selected === item.question ? "h-[130px]" : "h-0 "
+                    } ${
+                      theme === "Light"
+                        ? "text-[#696969] border-[#F6ECD3]"
+                        : "text-white border-[#5E4507]"
+                    } `}
+                  >
+                    {item.answer}
+                  </p>
+                </div>
               </div>
             );
           })}
-          <div className="flex justify-center gap-3 items-center">
-            <Link
-              href={""}
-              className={` w-[141px] text-black bg-gold500 text-sm font-bold flex justify-center items-center rounded-md h-[50px]`}
-            >
-              Contact Us
-            </Link>
-            <Link
-              href={""}
-              className={` w-[48px] border border-gold500 text-lg flex justify-center items-center rounded-md h-[50px] ${
-                theme === "Light" ? "text-black" : "text-white"
-              }`}
-            >
-              <FontAwesomeIcon icon={faAngleRight} />
-            </Link>
-            <Link
-              href={""}
-              className={` w-max font-bold text-sm flex justify-center items-center rounded-md h-[50px] ${
-                theme === "Light" ? "text-black" : "text-white"
-              }`}
-            >
-              Get Started
-            </Link>
-          </div>
-          <section className="w-full translate-y-12 bg-gold500 h-max rounded-lg py-8 md:py-[72px] px-8 flex flex-col items-center gap-7">
-            <p className="desktop:w-[800px] text-black  md:w-[90%] w-full text-center font-semibold leading-8 desktop:leading-10 text-sm desktop:text-[27px]">
-              Ready to Discuss Your Hosting Needs? Reach out to Our Team of
-              Experts Now! Click to Contact Us and Unlock Tailored Solutions for
-              Your Website
-            </p>
-            <Link
-              href={""}
-              className={` w-[279px] text-white bg-black text-base font-bold flex justify-center items-center rounded-md h-[64px]`}
-            >
-              Get Started
-            </Link>
-          </section>
+
+          <Card
+            text={
+              " Don't Settle for Average Hosting. Elevate Your Website and Embrace top level Security, Speed, and Support for Your Online Journey."
+            }
+          />
         </div>
       </div>
     </section>
