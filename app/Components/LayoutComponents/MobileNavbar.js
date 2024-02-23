@@ -46,6 +46,7 @@ export default function MobileNavbar() {
         <Image
           src={theme === "Light" ? LightThemeLogo : DarkThemeLogo}
           alt="Logo"
+          className="w-[130px]"
         />
       </Link>
       <button

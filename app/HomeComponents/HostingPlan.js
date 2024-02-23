@@ -20,16 +20,19 @@ import {
 export default function HostingPlan() {
   const { theme } = useTheme();
   const [perView, setPerView] = useState(1);
+  const [navigationButtonVisibility, setNavigationButtonVisibility] =
+    useState(false);
 
   const handleResize = () => {
     if (window.innerWidth <= 700) {
       setPerView(1);
+      setNavigationButtonVisibility(true);
     } else if (window.innerWidth > 700 && window.innerWidth <= 1000) {
       setPerView(2);
-    } else if (window.innerWidth > 1000 && window.innerWidth <= 1200) {
-      setPerView(3);
+      setNavigationButtonVisibility(true);
     } else {
-      setPerView(4);
+      setPerView(3);
+      setNavigationButtonVisibility(false);
     }
   };
 
@@ -40,7 +43,7 @@ export default function HostingPlan() {
 
   return (
     <section
-      data-aos="fade-right"
+      data-aos="fade-up"
       className={`w-full duration-300 h-max py-16 lg:pt-32 ${
         theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
@@ -56,120 +59,130 @@ export default function HostingPlan() {
         >
           Discover the Perfect Hosting Plan for You
         </h3>
-
-        <Splide
-          aria-label="Hosting Plans"
-          className="w-full"
-          options={{
-            perPage: perView,
-            gap: 20,
-          }}
-        >
-          {hostingPlanData.map((item, index) => (
-            <SplideSlide className="pb-10" key={item.name} virtualIndex={index}>
-              <div
-                className={`h-max mb-5 pt-6 pb-12 px-8 rounded-tl-lg rounded-tr-[100px] rounded-br-lg rounded-bl-[100px] mr-2 flex flex-col items-center border w-full md:w-[calc(100%-10px)] bg-transparent ${
-                  theme === "Light" ? "border-[#EFDAA4]" : "border-[#5E4507]"
+      </div>
+      <Splide
+        aria-label="Hosting Plans"
+        className="w-full md:px-[5%]"
+        options={{
+          perPage: perView,
+          gap: 20,
+          arrows: navigationButtonVisibility,
+        }}
+      >
+        {hostingPlanData.map((item, index) => (
+          <SplideSlide
+            className="pb-10 flex justify-center"
+            key={item.name}
+            virtualIndex={index}
+          >
+            <div
+              className={`h-max mb-5 w-[85%] pt-6 pb-12 px-8 rounded-tl-lg rounded-tr-[100px] rounded-br-lg rounded-bl-[100px] mr-2 flex flex-col items-center border md:w-[calc(100%-10px)] bg-transparent ${
+                theme === "Light" ? "border-[#EFDAA4]" : "border-[#5E4507]"
+              }`}
+            >
+              <h4
+                className={`text-center font-semibold text-2xl ${
+                  theme === "Light" ? "text-gray300" : "text-white"
+                } mb-3`}
+              >
+                {item.name}
+              </h4>
+              <p
+                className={`text-sm font-medium text-black mb-1 text-center ${
+                  theme === "Light" ? "text-gray300" : "text-white"
                 }`}
               >
-                <h4
-                  className={`text-center font-semibold text-2xl ${
-                    theme === "Light" ? "text-gray300" : "text-white"
-                  } mb-3`}
-                >
-                  {item.name}
-                </h4>
-                <p
-                  className={`text-sm font-medium text-black mb-1 text-center ${
-                    theme === "Light" ? "text-gray300" : "text-white"
-                  }`}
-                >
-                  Basically all you need to create your website
-                </p>
-                <div
-                  className={`w-full justify-center items-center font-medium mb-3 text-center flex ${
-                    theme === "Light" ? "text-gray300" : "text-white"
-                  }`}
-                >
-                  $<h1 className="text-[40px] font-bold">{item.price}/</h1>
-                  mo
-                </div>
-                <Link
-                  href={""}
-                  className={`mx-auto w-[90%] text-base font-semibold flex justify-center items-center mb-5 rounded-full duration-300 hover:scale-105 h-48 bg-gold500 text-white`}
-                >
-                  Get Started
-                </Link>
-                <div className="w-full border-b border-[#e5e5e5] mb-6"></div>
-                <p
-                  className={`${
-                    theme === "Light" ? "text-gray300" : "text-white"
-                  } w-full mb-5 font-bold text-lg`}
-                >
-                  Top Features
-                </p>
-                <div className="w-full flex flex-col gap-4">
-                  {item.topFeatures.map((topFeature) => {
-                    return (
-                      <div
-                        className="w-full flex items-center gap-2"
-                        key={crypto.randomUUID()}
-                      >
-                        <FontAwesomeIcon
-                          icon={
-                            topFeature.available ? faCheckCircle : faXmarkCircle
-                          }
-                          size="sm"
-                          color={`${theme === "Light" ? "#393939" : "white"}`}
-                        />
-                        <p
-                          className={`${
-                            theme === "Light" ? "text-gray300" : "text-white"
-                          } text-sm font-medium`}
-                        >
-                          {topFeature.feature} - {topFeature.value}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
-                <p
-                  className={`w-full my-5 font-bold text-lg ${
-                    theme === "Light" ? "text-gray300" : "text-white"
-                  }`}
-                >
-                  Security
-                </p>
-                <div className="w-full flex flex-col gap-4">
-                  {item.security.map((security) => {
-                    return (
-                      <div
-                        className="w-full flex items-center gap-2"
-                        key={crypto.randomUUID()}
-                      >
-                        <FontAwesomeIcon
-                          icon={
-                            security.available ? faCheckCircle : faXmarkCircle
-                          }
-                          size="sm"
-                          color={`${theme === "Light" ? "#393939" : "white"}`}
-                        />
-                        <p
-                          className={`text-sm font-medium ${
-                            theme === "Light" ? "text-gray300" : "text-white"
-                          }`}
-                        >
-                          {security.feature} - {security.value}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
+                Basically all you need to create your website
+              </p>
+              <div
+                className={`w-full justify-center items-center font-medium mb-3 text-center flex ${
+                  theme === "Light" ? "text-gray300" : "text-white"
+                }`}
+              >
+                $<h1 className="text-[40px] font-bold">{item.price}/</h1>
+                mo
               </div>
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
+              <Link
+                href={item.url}
+                className={`mx-auto w-[90%] text-base font-semibold flex justify-center items-center mb-5 rounded-full duration-300 hover:scale-105 h-48 bg-gold500 text-white`}
+              >
+                Get Started
+              </Link>
+              <div className="w-full border-b border-[#e5e5e5] mb-6"></div>
+              <p
+                className={`${
+                  theme === "Light" ? "text-gray300" : "text-white"
+                } w-full mb-5 font-bold text-lg`}
+              >
+                Top Features
+              </p>
+              <div className="w-full flex flex-col gap-4">
+                {item.topFeatures.map((topFeature) => {
+                  return (
+                    <div
+                      className="w-full flex items-center gap-2"
+                      key={crypto.randomUUID()}
+                    >
+                      <FontAwesomeIcon
+                        icon={
+                          topFeature.available ? faCheckCircle : faXmarkCircle
+                        }
+                        size="sm"
+                        color={`${theme === "Light" ? "#393939" : "white"}`}
+                      />
+                      <p
+                        className={`${
+                          theme === "Light" ? "text-gray300" : "text-white"
+                        } text-sm font-medium`}
+                      >
+                        {topFeature.feature} - {topFeature.value}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+              <p
+                className={`w-full my-5 font-bold text-lg ${
+                  theme === "Light" ? "text-gray300" : "text-white"
+                }`}
+              >
+                Security
+              </p>
+              <div className="w-full flex flex-col gap-4">
+                {item.security.map((security) => {
+                  return (
+                    <div
+                      className="w-full flex items-center gap-2"
+                      key={crypto.randomUUID()}
+                    >
+                      <FontAwesomeIcon
+                        icon={
+                          security.available ? faCheckCircle : faXmarkCircle
+                        }
+                        size="sm"
+                        color={`${theme === "Light" ? "#393939" : "white"}`}
+                      />
+                      <p
+                        className={`text-sm font-medium ${
+                          theme === "Light" ? "text-gray300" : "text-white"
+                        }`}
+                      >
+                        {security.feature} - {security.value}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </SplideSlide>
+        ))}
+      </Splide>
+      <Link
+        href=""
+        className="h-48 w-170 md:w-298 duration-300 hover:scale-105 mt-8 text-white rounded-full flex justify-center bg-gold500 items-center  text-base font-semibold mx-auto"
+      >
+        Custom
+      </Link>
     </section>
   );
 }

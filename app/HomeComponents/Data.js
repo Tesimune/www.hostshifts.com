@@ -26,124 +26,7 @@ export const developmentToolsData = [
 export const hostingPlanData = [
   {
     name: "Starter",
-    price: 0,
-    topFeatures: [
-      {
-        feature: "Websites",
-        available: true,
-        value: 1,
-      },
-      {
-        feature: "Sub Websites",
-        available: true,
-        value: 1,
-      },
-      {
-        feature: "NVMe SSD Storage",
-        available: true,
-        value: "1GB",
-      },
-      {
-        feature: "Databases",
-        available: true,
-        value: 2,
-      },
-      {
-        feature: "Bandwidth",
-        available: true,
-        value: "50GB",
-      },
-      {
-        feature: "Email accounts",
-        available: true,
-        value: 1,
-      },
-      {
-        feature: "FTP",
-        available: true,
-        value: 2,
-      },
-      {
-        feature: "SSL Certificate",
-        available: true,
-        value: 2,
-      },
-      {
-        feature: "Free Domains",
-        available: false,
-        value: 0,
-      },
-      {
-        feature: "Backups",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "Max Team Users",
-        available: true,
-        value: 3,
-      },
-      {
-        feature: "Softaculous (1-Click-Installer)",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "Website Builder Included",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "Litespeed",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "PHP",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "Node JS",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "Python",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "Contact/Inquires",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "Support",
-        available: false,
-        value: "False",
-      },
-    ],
-    security: [
-      {
-        feature: "Security",
-        available: true,
-        value: "Imunify360",
-      },
-      {
-        feature: "Secure Access Manager",
-        available: true,
-        value: "True",
-      },
-      {
-        feature: "Anti-DDoS Protection",
-        available: true,
-        value: "True",
-      },
-    ],
-  },
-  {
-    name: "Basic",
+    url: "https://clients.hostshifts.com/index.php?rp=/store/hosting/starter",
     price: 1.99,
     topFeatures: [
       {
@@ -262,6 +145,7 @@ export const hostingPlanData = [
   },
   {
     name: "Business",
+    url: "https://clients.hostshifts.com/index.php?rp=/store/hosting/business",
     price: 9.99,
     topFeatures: [
       {
@@ -380,6 +264,7 @@ export const hostingPlanData = [
   },
   {
     name: "Professional",
+    url: "https://clients.hostshifts.com/index.php?rp=/store/hosting/professional",
     price: 19.99,
     topFeatures: [
       {

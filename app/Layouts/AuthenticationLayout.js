@@ -5,7 +5,7 @@ import { useTheme } from "../Contexts/ThemeContext";
 
 //Images
 import LightThemeLogo from "@/public/images/LightMode/logo.png";
-import DarkThemeLogo from "@/public/images/DarkMode/authentication-logo.png";
+import DarkThemeLogo from "@/public/images/DarkMode/logo.png";
 
 export default function AuthenticationLayout({ children }) {
   const { theme } = useTheme();
@@ -15,11 +15,12 @@ export default function AuthenticationLayout({ children }) {
         theme === "Light" ? "bg-white" : "bg-darkModeBg"
       }`}
     >
-      <div className="w-[90%] mx-auto flex h-[60px] items-center">
+      <div className="w-[90%] mx-auto flex h-[100px] items-center">
         <Link href="/">
           <Image
             src={theme === "Light" ? LightThemeLogo : DarkThemeLogo}
             alt="Logo"
+            className="w-[135px]"
           />
         </Link>
       </div>

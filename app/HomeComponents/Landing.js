@@ -47,7 +47,7 @@ export default function Landing() {
           <p
             className={`${
               theme === "Light" ? "text-gray300" : "text-white"
-            } font-medium desktop:text-base desktop:leading-9 w-[88%] pb-4 text-center`}
+            } font-medium desktop:text-base desktop:leading-9 w-[88%] pb-6 text-center`}
           >
             Engineered for speed, ensuring lightning-fast loading times and
             optimal website performance. Experience the difference with our

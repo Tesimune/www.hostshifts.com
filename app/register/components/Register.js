@@ -1,6 +1,6 @@
 "use client";
-import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import { useTheme } from "@/app/Contexts/ThemeContext";
 
 // Icons
@@ -9,14 +9,20 @@ import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { faLock, faSignature } from "@fortawesome/free-solid-svg-icons";
 
 export default function RegisterComponent() {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm_password, setConfirmPassword] = useState("");
-  const { theme } = useTheme;
+  const { theme } = useTheme();
+
+  useEffect(() => {
+    router.push("https://clients.hostshifts.com/register.php");
+  }, []);
+
   return (
     <section className="mt-8 w-full flex justify-center">
-      <form
+      {/* <form
         className={`w-469 max-w-[82%] h-max rounded-lg bg-white flex flex-col items-center md:py-[47px] md:px-[41px] py-7 px-5`}
       >
         <p className="font-semibold text-lg md:text-2xl text-black mb-7">
@@ -108,7 +114,7 @@ export default function RegisterComponent() {
             Log In
           </Link>
         </div>
-      </form>
+      </form> */}
     </section>
   );
 }

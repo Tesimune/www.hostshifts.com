@@ -24,6 +24,7 @@ export default function DesktopNavbar() {
         <Image
           src={theme === "Light" ? LightThemeLogo : DarkThemeLogo}
           alt="Logo"
+          className="w-[135px]"
         />
       </Link>
       <div className="flex gap-12 z-50">
@@ -134,7 +135,7 @@ export default function DesktopNavbar() {
       </div>
       <div className="flex items-center gap-4 z-50">
         <Link
-          href="/register"
+          href="/login"
           className="h-48 w-148 duration-300 hover:scale-105 rounded-full flex justify-center bg-gold500 items-center text-white text-base font-semibold"
         >
           Sign Up

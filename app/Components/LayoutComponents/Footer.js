@@ -86,7 +86,7 @@ export default function Footer() {
               className="w-full flex h-48 rounded-full border border-r-none border-[#696969] mb-5"
             >
               <input
-                value="Enter email"
+                placeholder="Enter email"
                 className="w-[55%] px-5 h-full border-none outline-none text-sm text-[#393939] bg-transparent "
               />
               <button

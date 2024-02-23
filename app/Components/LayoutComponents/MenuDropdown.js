@@ -45,12 +45,13 @@ export default function MenuDropDown({ close, removeClass }) {
       } w-screen h-[100dvh] pb-8 pt-8 flex flex-col`}
     >
       {/* Logo */}
-      <div className="h-max w-[90%] mx-auto flex items-center justify-between">
+      <div className=" fixed top-0 left-[5%] h-[90px] w-[90%]  flex items-center justify-between">
         <div className="flex gap-3.5 items-center">
           <Link href="/">
             <Image
               src={theme === "Light" ? LightThemeLogo : DarkThemeLogo}
               alt="Logo"
+              className="w-[130px]"
             />
           </Link>
           <ThemeSwitch />
@@ -79,7 +80,7 @@ export default function MenuDropDown({ close, removeClass }) {
       </div>
 
       {/* Links */}
-      <div className="w-[90%] mt-5 overflow-x-hidden scroll-hidden overflow-y-auto h-[calc(100dvh-80px)] mx-auto items-center flex flex-col gap-7 py-8">
+      <div className="w-[90%] mt-10 overflow-x-hidden scroll-hidden overflow-y-auto h-[calc(100dvh-90px)] mx-auto items-center flex flex-col gap-7 py-8">
         <Link
           onClick={removeClass}
           href="/login"
@@ -89,7 +90,7 @@ export default function MenuDropDown({ close, removeClass }) {
         </Link>
         <Link
           onClick={removeClass}
-          href="/register"
+          href="/login"
           className={`w-full  flex text-base font-semibold text-white bg-gold500 justify-center items-center min-h-[48px] rounded  `}
         >
           Sign Up
