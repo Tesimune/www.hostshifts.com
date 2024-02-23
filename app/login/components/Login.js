@@ -1,15 +1,22 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { useTheme } from "@/app/Contexts/ThemeContext";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
+import {
+  faEye,
+  faEyeSlash,
+  faUserCircle,
+} from "@fortawesome/free-regular-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 export default function LoginComponent() {
-  const { theme } = useTheme();
+  const [passwordType, setPasswordType] = useState("password");
+
+  const togglePasswordType = () => {
+    setPasswordType(passwordType === "password" ? "text" : "password");
+  };
   return (
     <section className="mt-8 w-full flex justify-center">
       <form
@@ -42,7 +49,7 @@ export default function LoginComponent() {
           <p className="font-medium text-xs md:text-sm text-black mb-1">
             Password
           </p>
-          <div className="relative w-full md:h-12 border border-black rounded flex items-center gap-3">
+          <div className="relative w-full h-12 border border-black rounded flex items-center gap-3">
             <div className="w-12 flex justify-center border-r text-gold500">
               <FontAwesomeIcon icon={faLock} size="lg" />
             </div>
@@ -51,10 +58,20 @@ export default function LoginComponent() {
               autoComplete="off"
               name="password"
               size={20}
-              type="password"
+              type={passwordType}
               placeholder="Password"
-              className="w-[calc(100%-60px)] h-full border-none outline-none text-black/90 text-sm"
+              className="w-[calc(100%-100px)] h-full border-none outline-none text-black/90 text-sm"
             />
+            <button
+              onClick={togglePasswordType}
+              type="button"
+              className="w-[40px] flex justify-center text-gold500"
+            >
+              <FontAwesomeIcon
+                icon={passwordType === "password" ? faEyeSlash : faEye}
+                size="sm"
+              />
+            </button>
           </div>
         </div>
 
