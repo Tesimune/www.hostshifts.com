@@ -68,7 +68,7 @@ export default function LoginComponent() {
               className="w-[40px] flex justify-center text-gold500"
             >
               <FontAwesomeIcon
-                icon={passwordType === "password" ? faEyeSlash : faEye}
+                icon={passwordType === 'password' ? faEyeSlash : faEye}
                 size="sm"
               />
             </button>
@@ -76,7 +76,7 @@ export default function LoginComponent() {
         </div>
 
         <input
-          value="Log In"
+          value="Login"
           type="submit"
           className="h-48 cursor-pointer mb-3.5  rounded-md bg-gold500 w-full text-white text-sm md:text-base font-bold"
         />
