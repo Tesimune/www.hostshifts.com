@@ -83,14 +83,14 @@ export default function MenuDropDown({ close, removeClass }) {
       <div className="w-[90%] mt-10 overflow-x-hidden scroll-hidden overflow-y-auto h-[calc(100dvh-90px)] mx-auto items-center flex flex-col gap-7 py-8">
         <Link
           onClick={removeClass}
-          href="/login"
+          href="https://clients.hostshifts.com/login"
           className={`w-full text-gold500 flex text-base font-semibold justify-center items-center min-h-[48px] rounded border border-gold500 `}
         >
           Log In
         </Link>
         <Link
           onClick={removeClass}
-          href="/login"
+          href="https://clients.hostshifts.com/login"
           className={`w-full  flex text-base font-semibold text-white bg-gold500 justify-center items-center min-h-[48px] rounded  `}
         >
           Sign Up

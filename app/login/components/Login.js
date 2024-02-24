@@ -1,6 +1,7 @@
 "use client";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useState } from "react";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,14 +13,20 @@ import {
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 export default function LoginComponent() {
+  const router = useRouter();
   const [passwordType, setPasswordType] = useState("password");
 
   const togglePasswordType = () => {
     setPasswordType(passwordType === "password" ? "text" : "password");
   };
+
+  useEffect(() => {
+    router.push("https://clients.hostshifts.com/login");
+  }, []);
+
   return (
     <section className="mt-8 w-full flex justify-center">
-      <form
+      {/* <form
         method="post"
         action="https://clients.hostshifts.com/dologin.php"
         className={`w-469 max-w-[82%] h-max rounded-lg bg-white flex flex-col items-center md:py-[47px] md:px-[41px] py-7 px-5`}
@@ -92,7 +99,7 @@ export default function LoginComponent() {
             Sign Up
           </Link>
         </div>
-      </form>
+      </form> */}
     </section>
   );
 }

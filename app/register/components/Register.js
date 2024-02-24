@@ -108,7 +108,7 @@ export default function RegisterComponent() {
             Have an account?
           </p>
           <Link
-            href="/login"
+            href="https://clients.hostshifts.com/login"
             className="text-center underline text-sm text-gold500"
           >
             Log In
