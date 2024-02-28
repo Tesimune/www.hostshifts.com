@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       height: {
         50: "50px",
+        52: "52px",
         41: "41px",
         33: "33px",
         202: "202px",
@@ -35,6 +36,7 @@ module.exports = {
         58: "58px",
         469: "469px",
         298: "298px",
+        673: "673px",
       },
       colors: {
         gold500: "#D3A121",

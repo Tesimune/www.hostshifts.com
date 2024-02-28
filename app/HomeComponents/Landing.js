@@ -7,6 +7,8 @@ import { useTheme } from "../Contexts/ThemeContext";
 import Hero from "@/public/images/LightMode/Home/hero.png";
 import Link from "next/link";
 import LineSection from "../Components/LayoutComponents/LineSection";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Landing() {
   const { theme } = useTheme();
@@ -54,13 +56,28 @@ export default function Landing() {
             cutting-edge infrastructure designed to meet the demands of today's
             digital landscape.
           </p>
-          <div className="flex z-40 items-center gap-4">
-            <Link
+          <div className="flex w-full justify-center z-40 items-center mt-5">
+            <div className="w-673 max-w-full border border-[#EDDDB7] rounded-full h-52 bg-transparent flex items-center overflow-hidden">
+              <input
+                placeholder="eg. example.com"
+                className={`border-none font-semibold text-base placeholder:text-[#B0B0B0]  w-[calc(100%-64px)] h-full rounded-full bg-transparent outline-none pl-5 desktop:pl-10  ${
+                  theme === "Light" ? "text-gray300" : "text-[#B0B0B0]"
+                }`}
+              />
+              <button
+                className={`bg-transparent flex justify-center items-center h-full w-16 outline-none border-none ${
+                  theme === "Light" ? "text-gray300" : "text-[#B0B0B0]"
+                }`}
+              >
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
+            </div>
+            {/* <Link
               href=""
               className="h-48 w-298 duration-300 hover:scale-105 text-white rounded-full flex justify-center bg-gold500 items-center  text-base font-semibold"
             >
               Get Started
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
