@@ -57,21 +57,29 @@ export default function Landing() {
             digital landscape.
           </p>
           <div className="flex w-full justify-center z-40 items-center mt-5">
-            <div className="w-673 max-w-full border border-[#EDDDB7] rounded-full h-52 bg-transparent flex items-center overflow-hidden">
+            <form
+              action="https://clients.hostshifts.com/cart.php?a=add&domain=register"
+              method="post"
+              className="w-673 max-w-full border border-[#EDDDB7] rounded-full h-52 bg-transparent flex items-center overflow-hidden"
+            >
               <input
-                placeholder="eg. example.com"
+                type="text"
+                name="query"
+                size={20}
+                placeholder="Begin the search for your perfect domain name..."
                 className={`border-none font-semibold text-base placeholder:text-[#B0B0B0]  w-[calc(100%-64px)] h-full rounded-full bg-transparent outline-none pl-5 desktop:pl-10  ${
                   theme === "Light" ? "text-gray300" : "text-[#B0B0B0]"
                 }`}
               />
               <button
+                type="submit"
                 className={`bg-transparent flex justify-center items-center h-full w-16 outline-none border-none ${
                   theme === "Light" ? "text-gray300" : "text-[#B0B0B0]"
                 }`}
               >
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
-            </div>
+            </form>
             {/* <Link
               href=""
               className="h-48 w-298 duration-300 hover:scale-105 text-white rounded-full flex justify-center bg-gold500 items-center  text-base font-semibold"
