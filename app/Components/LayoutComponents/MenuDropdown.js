@@ -90,7 +90,7 @@ export default function MenuDropDown({ close, removeClass }) {
         </Link>
         <Link
           onClick={removeClass}
-          href="https://clients.hostshifts.com/login"
+          href="https://clients.hostshifts.com/register.php"
           className={`w-full  flex text-base font-semibold text-white bg-gold500 justify-center items-center min-h-[48px] rounded  `}
         >
           Sign Up

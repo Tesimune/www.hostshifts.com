@@ -123,21 +123,30 @@ export default function Footer() {
             <div className="w-max flex flex-col gap-1">
               <p className="text-lg text-white pb-2 font-semibold">Follow Us</p>
               <div className="flex gap-2.5">
-                <Link href="" className="text-white">
+                <Link
+                  href="https://www.linkedin.com/company/hostshifts/"
+                  className="text-white"
+                >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </Link>
-                <Link href="" className="text-white">
+                <Link
+                  href="https://x.com/hostshifts1?s=21"
+                  className="text-white"
+                >
                   <FontAwesomeIcon icon={faTwitter} />
                 </Link>
-                <Link href="" className="text-white">
+                <Link
+                  href="https://www.instagram.com/hostshifts?igsh=cG14cGs3ZWJoajdi"
+                  className="text-white"
+                >
                   <FontAwesomeIcon icon={faInstagram} />
                 </Link>
-                <Link href="" className="text-white">
+                {/* <Link href="" className="text-white">
                   <FontAwesomeIcon icon={faFacebook} />
                 </Link>
                 <Link href="" className="text-white">
                   <FontAwesomeIcon icon={faYoutube} />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
