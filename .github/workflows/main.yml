@@ -15,12 +15,12 @@ jobs:
         npm run build
     - name: Copy public to standalone
       run: |
-        cp -rf /public/ /.next/standalone/
+        cp -rf public/ .next/standalone/
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /hostshifts/
-        local-dir: /.next/standalone/
+        server-dir: hostshifts/
+        local-dir: .next/standalone/
