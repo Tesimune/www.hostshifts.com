@@ -5,6 +5,7 @@ import { useTheme } from "../Contexts/ThemeContext";
 
 //Images
 import Hero from "@/public/images/LightMode/Home/hero.png";
+
 import Link from "next/link";
 import LineSection from "../Components/LayoutComponents/LineSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
