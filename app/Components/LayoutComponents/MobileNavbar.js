@@ -41,7 +41,7 @@ export default function MobileNavbar() {
   }, [pathname]);
 
   return (
-    <section className="w-[90%] relative mx-auto desktop:hidden flex h-41 justify-between items-center">
+    <section className="w-[90%] relative mx-auto xl:hidden flex h-41 justify-between items-center">
       <Link href="/" className="">
         <Image
           src={theme === "Light" ? LightThemeLogo : DarkThemeLogo}
@@ -50,7 +50,7 @@ export default function MobileNavbar() {
         />
       </Link>
       <button
-        className={`${navAnimationClass} block hamburger lg:hidden outline-none ${
+        className={`${navAnimationClass} block hamburger xl:hidden outline-none ${
           isOpen ? "invisible" : "visible"
         }`}
         type="button"

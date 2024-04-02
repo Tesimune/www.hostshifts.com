@@ -14,12 +14,12 @@ import LightThemeLogo from "@/public/images/LightMode/logo.png";
 import DarkThemeLogo from "@/public/images/DarkMode/logo.png";
 
 //Data
-import { productSubMenuLinks, resourcesSubMenuLinks } from "../NavlinksData";
+import { storeSubMenuLinks } from "../NavlinksData";
 
 export default function DesktopNavbar() {
   const { theme } = useTheme();
   return (
-    <section className="desktop:w-[90%] relative  mx-auto hidden desktop:flex h-41 justify-between items-center">
+    <section className="xl:w-[90%] relative  mx-auto hidden xl:flex h-41 justify-between items-center">
       <Link href="/" className="z-50">
         <Image
           src={theme === "Light" ? LightThemeLogo : DarkThemeLogo}
@@ -32,105 +32,74 @@ export default function DesktopNavbar() {
           <p
             className={`${
               theme === "Light" ? "text-gray200" : "text-gray100"
-            }  text-base  font-medium flex items-center gap-2`}
-          >
-            Product <FontAwesomeIcon icon={faAngleDown} size="base" />
-          </p>
-          <div
-            className={`${
-              theme === "Light" ? "bg-white" : "bg-darkModeBg"
-            } absolute w-40 rounded-lg shadow-xl mt-3 p-5 -left-16 duration-300 opacity-0 invisible top-[100%] flex flex-col gap-3`}
-          >
-            {productSubMenuLinks.map((item) => {
-              return (
-                <Link
-                  key={crypto.randomUUID()}
-                  href={item.path}
-                  className={`${
-                    theme === "Light" ? "text-gray200" : "text-gray100"
-                  } text-sm font-medium`}
-                >
-                  {item.name}
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-        <div className="relative cursor-pointer hover-dropDown">
-          <p
-            className={`${
-              theme === "Light" ? "text-gray200" : "text-gray100"
             } text-base font-medium flex items-center gap-2`}
           >
-            Resources <FontAwesomeIcon icon={faAngleDown} size="base" />
+            Store <FontAwesomeIcon icon={faAngleDown} size="base" />
           </p>
           <div
+            style={{ boxShadow: "0px 20px 417px 0px #00000012" }}
             className={`${
               theme === "Light" ? "bg-white" : "bg-darkModeBg"
-            } absolute mt-3 w-96 rounded-lg shadow-xl p-5 -left-40 duration-300 opacity-0 invisible top-[100%] flex justify-between`}
+            } absolute mt-3 w-[500px] rounded-3xl p-5 -left-40 duration-300 opacity-0 invisible top-[100%] flex justify-between`}
           >
-            <div className="w-[46%] flex flex-col gap-3">
-              <p
-                className={`${
-                  theme === "Light" ? "text-gray200" : "text-gray100"
-                } text-sm font-semibold`}
-              >
-                Resources
-              </p>
-              {resourcesSubMenuLinks.resources.map((item) => {
+            <div className="w-[46%] flex flex-col">
+              {storeSubMenuLinks.slice(0, 8).map((item) => {
                 return (
                   <Link
                     key={crypto.randomUUID()}
                     href={item.path}
                     className={`${
                       theme === "Light" ? "text-gray200" : "text-gray100"
-                    } text-sm font-medium`}
+                    } text-sm font-medium h-[40px] flex px-3 duration-300 items-center bg-transparent border border-transparent text-[#b0b0b0] hover:text-[#262626] hover:bg-[#ffbb0a0f] hover:border-[#ffbb0a0d]`}
                   >
                     {item.name}
                   </Link>
                 );
               })}
             </div>
-            <div className="w-[46%] flex flex-col gap-3">
-              <p
-                className={`${
-                  theme === "Light" ? "text-gray200" : "text-gray100"
-                } text-sm font-semibold`}
-              >
-                About Us
-              </p>
-              {resourcesSubMenuLinks.about.map((item) => {
-                return (
-                  <Link
-                    key={crypto.randomUUID()}
-                    href={item.path}
-                    className={`${
-                      theme === "Light" ? "text-gray200" : "text-gray100"
-                    } text-sm font-medium`}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
+            <div className="w-[46%] flex flex-col">
+              {storeSubMenuLinks
+                .slice(8, storeSubMenuLinks.length)
+                .map((item) => {
+                  return (
+                    <Link
+                      key={crypto.randomUUID()}
+                      href={item.path}
+                      className={`${
+                        theme === "Light" ? "text-gray200" : "text-gray100"
+                      } text-sm font-medium h-[40px] flex px-3 duration-300 items-center bg-transparent border border-transparent text-[#b0b0b0] hover:text-[#262626] hover:bg-[#ffbb0a0f] hover:border-[#ffbb0a0d]`}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         </div>
         <Link
-          href=""
+          href="https://clients.hostshifts.com/index.php?rp=/announcements"
           className={`${
             theme === "Light" ? "text-gray200" : "text-gray100"
           } text-base font-medium`}
         >
-          Doc
+          Announcements
         </Link>
 
         <Link
-          href=""
+          href="https://clients.hostshifts.com/index.php?rp=/knowledgebase"
           className={`${
             theme === "Light" ? "text-gray200" : "text-gray100"
           } text-base font-medium`}
         >
-          Pricing
+          Knowledgebase
+        </Link>
+        <Link
+          href="https://clients.hostshifts.com/contact.php"
+          className={`${
+            theme === "Light" ? "text-gray200" : "text-gray100"
+          } text-base font-medium`}
+        >
+          Contact Us
         </Link>
       </div>
       <div className="flex items-center gap-4 z-50">

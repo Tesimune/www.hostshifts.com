@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { footerLinksData } from "./FooterLinksData";
+import { storeSubMenuLinks } from "../NavlinksData";
 
 //Contexts
 import { useTheme } from "../../Contexts/ThemeContext";
@@ -30,8 +30,8 @@ export default function Footer() {
       <section className="flex flex-col w-[90%]">
         <div className="w-full border-b border-[#3D3D3D] gap-8 desktop:gap-0 pb-14 flex desktop:flex-wrap flex-col desktop:flex-row items-center desktop:items-start desktop:justify-between">
           <div className="w-max flex flex-col gap-1 items-center desktop:items-start">
-            <p className="text-lg font-medium text-white pb-2">Products</p>
-            {footerLinksData.products.map((item) => (
+            {/* <p className="text-lg font-medium text-white pb-2">Products</p> */}
+            {storeSubMenuLinks.slice(0, 5).map((item) => (
               <Link
                 href={item.path}
                 key={crypto.randomUUID()}
@@ -42,8 +42,8 @@ export default function Footer() {
             ))}
           </div>
           <div className="w-max flex flex-col gap-1 items-center desktop:items-start">
-            <p className="text-lg font-medium text-white pb-2">Resources</p>
-            {footerLinksData.resources.map((item) => (
+            {/* <p className="text-lg font-medium text-white pb-2">Resources</p> */}
+            {storeSubMenuLinks.slice(5, 10).map((item) => (
               <Link
                 href={item.path}
                 key={crypto.randomUUID()}
@@ -54,8 +54,8 @@ export default function Footer() {
             ))}
           </div>
           <div className="w-max flex flex-col gap-1 items-center desktop:items-start">
-            <p className="text-lg font-medium text-white pb-2">About</p>
-            {footerLinksData.about.map((item) => (
+            {/* <p className="text-lg font-medium text-white pb-2">About</p> */}
+            {storeSubMenuLinks.slice(10, 15).map((item) => (
               <Link
                 href={item.path}
                 key={crypto.randomUUID()}
@@ -66,16 +66,26 @@ export default function Footer() {
             ))}
           </div>
           <div className="w-max flex flex-col gap-1 items-center desktop:items-start">
-            <p className="text-lg font-medium text-white pb-2">Support</p>
-            {footerLinksData.support.map((item) => (
-              <Link
-                href={item.path}
-                key={crypto.randomUUID()}
-                className="text-sm font-normal text-[#9E9E9E] pb-1"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {/* <p className="text-lg font-medium text-white pb-2">Support</p> */}
+
+            <Link
+              href="https://clients.hostshifts.com/index.php?rp=/announcements"
+              className="text-sm font-normal text-[#9E9E9E] pb-1"
+            >
+              Announcements
+            </Link>
+            <Link
+              href="https://clients.hostshifts.com/index.php?rp=/knowledgebase"
+              className="text-sm font-normal text-[#9E9E9E] pb-1"
+            >
+              Knowledgebase
+            </Link>
+            <Link
+              href="https://clients.hostshifts.com/contact.php"
+              className="text-sm font-normal text-[#9E9E9E] pb-1"
+            >
+              Contact Us
+            </Link>
           </div>
           <div className="w-298 flex flex-col gap-1 items-center desktop:items-start">
             <p className="text-lg font-medium text-white pb-2">

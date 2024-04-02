@@ -14,7 +14,7 @@ import LightThemeLogo from "@/public/images/LightMode/logo.png";
 import DarkThemeLogo from "@/public/images/DarkMode/logo.png";
 
 //Data
-import { productSubMenuLinks, resourcesSubMenuLinks } from "../NavlinksData";
+import { storeSubMenuLinks } from "../NavlinksData";
 import Image from "next/image";
 import ThemeSwitch from "../ThemeSwitch";
 
@@ -57,7 +57,7 @@ export default function MenuDropDown({ close, removeClass }) {
           <ThemeSwitch />
         </div>
         <button
-          className={`open block hamburger lg:hidden outline-none`}
+          className={`open block hamburger xl:hidden outline-none`}
           type="button"
           onClick={close}
         >
@@ -84,28 +84,28 @@ export default function MenuDropDown({ close, removeClass }) {
         <Link
           onClick={removeClass}
           href="https://clients.hostshifts.com/login"
-          className={`w-full text-gold500 flex text-base font-semibold justify-center items-center min-h-[48px] rounded border border-gold500 `}
+          className={`w-full max-w-[700px] text-gold500 flex text-base font-semibold justify-center items-center min-h-[48px] rounded border border-gold500 `}
         >
           Log In
         </Link>
         <Link
           onClick={removeClass}
           href="https://clients.hostshifts.com/register.php"
-          className={`w-full  flex text-base font-semibold text-white bg-gold500 justify-center items-center min-h-[48px] rounded  `}
+          className={`w-full max-w-[700px]  flex text-base font-semibold text-white bg-gold500 justify-center items-center min-h-[48px] rounded  `}
         >
           Sign Up
         </Link>
-        <div className="flex flex-col w-full">
+        <div className="flex max-w-[700px] flex-col w-full">
           <div
-            onClick={() => toggleSelectedMenu("Product")}
+            onClick={() => toggleSelectedMenu("Store")}
             className={`${
               theme === "Light" ? "text-gray200" : "text-gray100"
             } text-base cursor-pointer font-bold flex justify-between items-center`}
           >
-            Product
+            Store
             <span
               className={`duration-300 ${
-                selectedMenu === "Product" ? "rotate-90" : "rotate-0"
+                selectedMenu === "Store" ? "rotate-90" : "rotate-0"
               }`}
             >
               <FontAwesomeIcon icon={faAngleRight} fontSize={16} />
@@ -114,10 +114,10 @@ export default function MenuDropDown({ close, removeClass }) {
 
           <div
             className={`w-full pl-3 translate-y-3 overflow-y-hidden flex flex-col gap-4 duration-300 ${
-              selectedMenu === "Product" ? "max-h-[1000px]" : "max-h-0"
+              selectedMenu === "Store" ? "max-h-[2000px]" : "max-h-0"
             }`}
           >
-            {productSubMenuLinks.map((item) => {
+            {storeSubMenuLinks.map((item) => {
               return (
                 <Link
                   key={crypto.randomUUID()}
@@ -132,87 +132,31 @@ export default function MenuDropDown({ close, removeClass }) {
             })}
           </div>
         </div>
-        <div className="flex flex-col w-full">
-          <div
-            onClick={() => toggleSelectedMenu("Resources")}
-            className={`${
-              theme === "Light" ? "text-gray200" : "text-gray100"
-            } text-base cursor-pointer font-bold flex justify-between items-center`}
-          >
-            Resources
-            <span
-              className={`duration-300 ${
-                selectedMenu === "Resources" ? "rotate-90" : "rotate-0"
-              }`}
-            >
-              <FontAwesomeIcon icon={faAngleRight} fontSize={16} />
-            </span>
-          </div>
 
-          <div
-            className={`w-full pl-3 translate-y-3 overflow-y-hidden flex flex-col gap-4 duration-300 ${
-              selectedMenu === "Resources" ? "max-h-[1000px]" : "max-h-0"
-            }`}
-          >
-            {" "}
-            <p
-              className={`${
-                theme === "Light" ? "text-gray200" : "text-gray100"
-              } text-sm font-semibold`}
-            >
-              Resources
-            </p>
-            {resourcesSubMenuLinks.resources.map((item) => {
-              return (
-                <Link
-                  key={crypto.randomUUID()}
-                  href={item.path}
-                  className={`${
-                    theme === "Light" ? "text-gray200" : "text-gray100"
-                  } text-xs font-medium pl-2`}
-                >
-                  {item.name}
-                </Link>
-              );
-            })}
-            <p
-              className={`${
-                theme === "Light" ? "text-gray200" : "text-gray100"
-              } text-sm font-semibold pt-4`}
-            >
-              About Us
-            </p>
-            {resourcesSubMenuLinks.about.map((item) => {
-              return (
-                <Link
-                  key={crypto.randomUUID()}
-                  href={item.path}
-                  className={`${
-                    theme === "Light" ? "text-gray200" : "text-gray100"
-                  } text-xs font-medium pl-2`}
-                >
-                  {item.name}
-                </Link>
-              );
-            })}
-          </div>
-        </div>
         <Link
-          href=""
+          href="https://clients.hostshifts.com/index.php?rp=/announcements"
           className={`${
             theme === "Light" ? "text-gray200" : "text-gray100"
-          } text-base font-bold w-full`}
+          } text-base font-bold w-full max-w-[700px]`}
         >
-          Doc
+          Announcements
         </Link>
 
         <Link
-          href=""
+          href="https://clients.hostshifts.com/index.php?rp=/knowledgebase"
           className={`${
             theme === "Light" ? "text-gray200" : "text-gray100"
-          } text-base font-bold w-full`}
+          } text-base font-bold w-full max-w-[700px]`}
         >
-          Pricing
+          Knowledgebase
+        </Link>
+        <Link
+          href="https://clients.hostshifts.com/contact.php"
+          className={`${
+            theme === "Light" ? "text-gray200" : "text-gray100"
+          } text-base font-bold w-full max-w-[700px]`}
+        >
+          Contact Us
         </Link>
       </div>
     </div>
