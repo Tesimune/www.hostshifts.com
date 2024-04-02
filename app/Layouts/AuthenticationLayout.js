@@ -4,8 +4,8 @@ import Image from "next/image";
 import { useTheme } from "../Contexts/ThemeContext";
 
 //Images
-import LightThemeLogo from "@/public/images/LightMode/logo.png";
-import DarkThemeLogo from "@/public/images/DarkMode/logo.png";
+import LightThemeLogo from "/images/LightMode/logo.png";
+import DarkThemeLogo from "/images/DarkMode/logo.png";
 
 export default function AuthenticationLayout({ children }) {
   const { theme } = useTheme();

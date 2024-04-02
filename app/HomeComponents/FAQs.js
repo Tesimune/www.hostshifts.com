@@ -11,8 +11,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 //Images
-import LightModePencil from "@/public/images/LightMode/Home/pencil.png";
-import DarkModePencil from "@/public/images/DarkMode/Home/pencil.png";
+import LightModePencil from "/images/LightMode/Home/pencil.png";
+import DarkModePencil from "/images/DarkMode/Home/pencil.png";
 import Image from "next/image";
 
 export default function FreequentlyAskedQuestion() {
