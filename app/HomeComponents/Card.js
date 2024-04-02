@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Card({ text }) {
   return (
     <div
-      style={{ backgroundImage: "url(/images/rectangle.png)" }}
+      style={{ backgroundImage: "url(@/public/images/rectangle.png)" }}
       className="w-full rounded-[32px] bg-gold500 flex justify-center items-center mt-10 py-14"
     >
       <div className="w-[85%] md:w-[80%] desktop:w-[820px] flex flex-col items-center">

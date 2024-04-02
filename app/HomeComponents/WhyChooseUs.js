@@ -4,9 +4,9 @@ import Card from "./Card";
 import { useTheme } from "../Contexts/ThemeContext";
 
 // Images
-import CustomerSupport from "/images/customer-support.png";
-import AffordablePricing from "/images/affordable-pricing.png";
-import RobustSecurity from "/images/robust-security.png";
+import CustomerSupport from "@/public/images/customer-support.png";
+import AffordablePricing from "@/public/images/affordable-pricing.png";
+import RobustSecurity from "@/public/images/robust-security.png";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

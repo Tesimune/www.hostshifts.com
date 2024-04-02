@@ -1,14 +1,14 @@
-import NodeJs from "/images/LightMode/Home/node-js.png";
-import PHP from "/images/LightMode/Home/php.png";
-import Clojure from "/images/LightMode/Home/clojure.png";
-import Drupal from "/images/LightMode/Home/drupal.png";
-import Java from "/images/LightMode/Home/java.png";
-import MySQL from "/images/LightMode/Home/my-sql.png";
-import Python from "/images/LightMode/Home/python.png";
-import Ruby from "/images/LightMode/Home/ruby.png";
-import Scala from "/images/LightMode/Home/scala.png";
-import Wordpress from "/images/LightMode/Home/wordpress.png";
-import SodiqDavid from "/images/sodiq-david.png";
+import NodeJs from "@/public/images/LightMode/Home/node-js.png";
+import PHP from "@/public/images/LightMode/Home/php.png";
+import Clojure from "@/public/images/LightMode/Home/clojure.png";
+import Drupal from "@/public/images/LightMode/Home/drupal.png";
+import Java from "@/public/images/LightMode/Home/java.png";
+import MySQL from "@/public/images/LightMode/Home/my-sql.png";
+import Python from "@/public/images/LightMode/Home/python.png";
+import Ruby from "@/public/images/LightMode/Home/ruby.png";
+import Scala from "@/public/images/LightMode/Home/scala.png";
+import Wordpress from "@/public/images/LightMode/Home/wordpress.png";
+import SodiqDavid from "@/public/images/sodiq-david.png";
 
 export const developmentToolsData = [
   { name: "Node.JS", img: NodeJs },

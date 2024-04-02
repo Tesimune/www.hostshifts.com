@@ -4,11 +4,11 @@ import { useTheme } from "@/app/Contexts/ThemeContext";
 
 //Images
 import Image from "next/image";
-import Hero from "/images/LightMode/about/hero.png";
-import HeroDark from "/images/DarkMode/about/hero.png";
-import QuoteLeft from "/images/quote-left.png";
-import QuoteRight from "/images/quote-right.png";
-import ComingSoon from "/images/coming-soon.png";
+import Hero from "@/public/images/LightMode/about/hero.png";
+import HeroDark from "@/public/images/DarkMode/about/hero.png";
+import QuoteLeft from "@/public/images/quote-left.png";
+import QuoteRight from "@/public/images/quote-right.png";
+import ComingSoon from "@/public/images/coming-soon.png";
 
 export default function Landing() {
   const { theme } = useTheme();
