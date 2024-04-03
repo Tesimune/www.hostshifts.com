@@ -46,8 +46,12 @@ export default function DevelopmentTools() {
                     : "border-[#5E4507] bg-transparent"
                 }`}
               >
-                <div className="w-auto h-[58%]">
-                  <Image src={item.img} alt="Logo" />
+                <div className="w-auto h-[58%] max-h-[58%] overflow-hidden">
+                  <Image
+                    src={item.img}
+                    alt="Logo"
+                    className="w-auto h-auto max-h-[100%] object-contain"
+                  />
                 </div>
                 <p
                   className={`font-medium text-xl ${

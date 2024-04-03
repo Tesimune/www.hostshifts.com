@@ -4,6 +4,15 @@ import Drupal from "@/public/images/LightMode/Home/drupal.png";
 import MySQL from "@/public/images/LightMode/Home/my-sql.png";
 import Python from "@/public/images/LightMode/Home/python.png";
 import Wordpress from "@/public/images/LightMode/Home/wordpress.png";
+import Terminal from "@/public/images/terminal.jpg";
+import Oxwall from "@/public/images/oxwall.png";
+import Laravel from "@/public/images/laravel.png";
+import Joomia from "@/public/images/joomia.png";
+import Dolphin from "@/public/images/dolphin.png";
+import CronJobs from "@/public/images/cron-jobs.png";
+import ConcreteCMS from "@/public/images/concrete-cms.jpg";
+import ClipBucket from "@/public/images/clipbucket.webp";
+import Abantecart from "@/public/images/abantecart.png";
 import SodiqDavid from "@/public/images/sodiq-david.png";
 
 export const developmentToolsData = [
@@ -13,6 +22,15 @@ export const developmentToolsData = [
   { name: "Wordpress", img: Wordpress },
   { name: "MySQL", img: MySQL },
   { name: "Drupal", img: Drupal },
+  { name: "Terminal", img: Terminal },
+  { name: "Oxwall", img: Oxwall },
+  { name: "Laravel", img: Laravel },
+  { name: "Joomia", img: Joomia },
+  { name: "Dolphin", img: Dolphin },
+  { name: "Cron Jobs", img: CronJobs },
+  { name: "Concrete CMS", img: ConcreteCMS },
+  { name: "Clip Bucket", img: ClipBucket },
+  { name: "Abante Cart", img: Abantecart },
 ];
 
 export const hostingPlanData = [
