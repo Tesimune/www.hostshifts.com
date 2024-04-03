@@ -178,7 +178,7 @@ export default function HostingPlan() {
         ))}
       </Splide>
       <Link
-        href=""
+        href="mailto:hello@hostshifts.com"
         className="h-48 w-170 md:w-298 duration-300 hover:scale-105 mt-8 text-white rounded-full flex justify-center bg-gold500 items-center  text-base font-semibold mx-auto"
       >
         Custom

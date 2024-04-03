@@ -1,12 +1,8 @@
 import NodeJs from "@/public/images/LightMode/Home/node-js.png";
 import PHP from "@/public/images/LightMode/Home/php.png";
-import Clojure from "@/public/images/LightMode/Home/clojure.png";
 import Drupal from "@/public/images/LightMode/Home/drupal.png";
-import Java from "@/public/images/LightMode/Home/java.png";
 import MySQL from "@/public/images/LightMode/Home/my-sql.png";
 import Python from "@/public/images/LightMode/Home/python.png";
-import Ruby from "@/public/images/LightMode/Home/ruby.png";
-import Scala from "@/public/images/LightMode/Home/scala.png";
 import Wordpress from "@/public/images/LightMode/Home/wordpress.png";
 import SodiqDavid from "@/public/images/sodiq-david.png";
 
@@ -14,11 +10,7 @@ export const developmentToolsData = [
   { name: "Node.JS", img: NodeJs },
   { name: "PHP", img: PHP },
   { name: "Python", img: Python },
-  { name: "Java", img: Java },
   { name: "Wordpress", img: Wordpress },
-  { name: "Ruby", img: Ruby },
-  { name: "Scala", img: Scala },
-  { name: "Clojure", img: Clojure },
   { name: "MySQL", img: MySQL },
   { name: "Drupal", img: Drupal },
 ];
@@ -71,8 +63,8 @@ export const hostingPlanData = [
       },
       {
         feature: "Free Domains",
-        available: true,
-        value: 1,
+        available: false,
+        value: 0,
       },
       {
         feature: "Backups",
@@ -101,6 +93,11 @@ export const hostingPlanData = [
       },
       {
         feature: "PHP",
+        available: true,
+        value: "True",
+      },
+      {
+        feature: "WordPress",
         available: true,
         value: "True",
       },
@@ -224,6 +221,11 @@ export const hostingPlanData = [
         value: "True",
       },
       {
+        feature: "WordPress",
+        available: true,
+        value: "True",
+      },
+      {
         feature: "Node JS",
         available: true,
         value: "True",
@@ -339,6 +341,11 @@ export const hostingPlanData = [
       },
       {
         feature: "PHP",
+        available: true,
+        value: "True",
+      },
+      {
+        feature: "WordPress",
         available: true,
         value: "True",
       },
