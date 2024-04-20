@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/app/Contexts/ThemeContext";
+import { useTheme } from "@/app/contexts/ThemeContext";
 
 //Images
 import Image from "next/image";

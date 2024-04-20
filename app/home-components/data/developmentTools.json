@@ -1,0 +1,17 @@
+[
+    { "name": "Node.JS", "img": "/images/nodejs.png" },
+    { "name": "PHP", "img": "/images/php.png" },
+    { "name": "Python", "img": "/images/python.png" },
+    { "name": "Wordpress", "img": "/images/wordpress.png" },
+    { "name": "MySQL", "img": "/images/mysql.png" },
+    { "name": "Drupal", "img": "/images/drupal.png" },
+    { "name": "Terminal", "img": "/images/terminal.jpg" },
+    { "name": "Oxwall", "img": "/images/oxwall.png" },
+    { "name": "Laravel", "img": "/images/laravel.png" },
+    { "name": "Joomia", "img": "/images/joomia.png" },
+    { "name": "Dolphin", "img": "/images/dolphin.png" },
+    { "name": "Cron Jobs", "img": "/images/cron-jobs.png" },
+    { "name": "Concrete CMS", "img": "/images/concrete-cms.jpg" },
+    { "name": "Clip Bucket", "img": "/images/clipbucket.webp" },
+    { "name": "Abante Cart", "img": "/images/abantecart.png" }
+  ]

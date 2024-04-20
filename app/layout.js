@@ -1,8 +1,9 @@
 import { Poppins } from "next/font/google";
+import { cn } from "@/lib/utils";
 import "./globals.css";
 
 // Contexts
-import { ThemeProvider } from "./Contexts/ThemeContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -43,7 +44,7 @@ export default function RootLayout({ children }) {
           sizes="any"
         />
       </head>
-      <body className={poppins.className}>
+      <body className={cn("", poppins.className)}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

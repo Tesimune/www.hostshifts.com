@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { useTheme } from "@/app/Contexts/ThemeContext";
+import { useTheme } from "@/app/contexts/ThemeContext";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

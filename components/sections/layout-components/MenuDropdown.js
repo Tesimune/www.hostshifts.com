@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 //Context
-import { useTheme } from "../../Contexts/ThemeContext";
+import { useTheme } from "@/app/contexts/ThemeContext";
 
 //Icons
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";

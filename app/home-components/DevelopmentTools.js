@@ -1,9 +1,8 @@
 "use client";
-import Image from "next/image";
-import { useTheme } from "../Contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
 
 //Data
-import { developmentToolsData } from "./Data";
+import developmentToolsData from "@/app/home-components/data/developmentTools";
 
 export default function DevelopmentTools() {
   const { theme } = useTheme();
@@ -47,7 +46,7 @@ export default function DevelopmentTools() {
                 }`}
               >
                 <div className="w-auto h-[58%] max-h-[58%] overflow-hidden">
-                  <Image
+                  <img
                     src={item.img}
                     alt="Logo"
                     className="w-auto h-auto max-h-[100%] object-contain"

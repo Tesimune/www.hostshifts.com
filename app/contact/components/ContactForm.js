@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/app/Contexts/ThemeContext";
+import { useTheme } from "@/app/contexts/ThemeContext";
 import { useState } from "react";
 
 export default function ContactForm() {

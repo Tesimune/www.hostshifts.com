@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useTheme } from "../Contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
 
 //Data
-import { customerReviewData } from "./Data";
+import customerReviewData from "./data/customerReview";
 
 // Splide JS
 import "@splidejs/react-splide/css";
@@ -63,7 +63,12 @@ export default function CustomerReview() {
                       {item.message}
                     </p>
                     <div className="w-max flex gap-3 items-center">
-                      <Image src={item.userImage} width={40} alt="User Image" />
+                      <Image
+                        src={item.userImage}
+                        width={40}
+                        height={40}
+                        alt="User Image"
+                      />
                       <div className="flex flex-col gap-0.5">
                         <p
                           className={`font-semibold desktop:text-base text-sm ${

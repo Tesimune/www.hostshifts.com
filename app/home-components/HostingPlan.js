@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useTheme } from "../Contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
 
 // Splide JS
 import "@splidejs/react-splide/css";
 import { SplideSlide, Splide } from "@splidejs/react-splide";
 
 //Data
-import { hostingPlanData } from "./Data";
+import hostingPlanData from "./data/hostingPlans";
 import Link from "next/link";
 
 // Icon
@@ -20,19 +20,14 @@ import {
 export default function HostingPlan() {
   const { theme } = useTheme();
   const [perView, setPerView] = useState(1);
-  const [navigationButtonVisibility, setNavigationButtonVisibility] =
-    useState(false);
 
   const handleResize = () => {
     if (window.innerWidth <= 700) {
       setPerView(1);
-      setNavigationButtonVisibility(true);
     } else if (window.innerWidth > 700 && window.innerWidth <= 1000) {
       setPerView(2);
-      setNavigationButtonVisibility(true);
     } else {
       setPerView(3);
-      setNavigationButtonVisibility(false);
     }
   };
 
@@ -66,7 +61,6 @@ export default function HostingPlan() {
         options={{
           perPage: perView,
           gap: 20,
-          arrows: navigationButtonVisibility,
         }}
       >
         {hostingPlanData.map((item, index) => (
@@ -100,7 +94,7 @@ export default function HostingPlan() {
                 }`}
               >
                 $<h1 className="text-[40px] font-bold">{item.price}/</h1>
-                mo
+                year
               </div>
               <Link
                 href={item.url}

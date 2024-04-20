@@ -1,12 +1,12 @@
-import GuestLayout from "./Layouts/GuestLayout";
+import GuestLayout from "./layouts/GuestLayout";
 
 // Sections
-import Landing from "./HomeComponents/Landing";
-import DevelopmentTools from "./HomeComponents/DevelopmentTools";
-import HostingPlan from "./HomeComponents/HostingPlan";
-import CustomerReview from "./HomeComponents/CustomerReview";
-import FreequentlyAskedQuestion from "./HomeComponents/FAQs";
-import WhyChooseUs from "./HomeComponents/WhyChooseUs";
+import Landing from "./home-components/Landing";
+import DevelopmentTools from "./home-components/DevelopmentTools";
+import HostingPlan from "./home-components/HostingPlan";
+import CustomerReview from "./home-components/CustomerReview";
+import FreequentlyAskedQuestion from "./home-components/FAQs";
+import WhyChooseUs from "./home-components/WhyChooseUs";
 
 export default function Home() {
   return (

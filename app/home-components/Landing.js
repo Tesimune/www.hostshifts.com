@@ -1,13 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import { useTheme } from "../Contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
 
-//Images
-import Hero from "@/public/images/LightMode/Home/hero.png";
-
-import Link from "next/link";
-import LineSection from "../Components/LayoutComponents/LineSection";
+import LineSection from "@/components/sections/layout-components/LineSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 

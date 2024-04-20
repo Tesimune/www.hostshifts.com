@@ -1,0 +1,746 @@
+[
+    {
+      "name": "Starter",
+      "url": "https://clients.hostshifts.com/index.php?rp=/store/hosting/starter",
+      "price": 4.99,
+      "topFeatures": [
+        {
+          "feature": "Websites",
+          "available": true,
+          "value": 1
+        },
+        {
+          "feature": "Sub Websites",
+          "available": true,
+          "value": 2
+        },
+        {
+          "feature": "NVMe SSD Storage",
+          "available": true,
+          "value": "10GB"
+        },
+        {
+          "feature": "Databases",
+          "available": true,
+          "value": 2
+        },
+        {
+          "feature": "Bandwidth",
+          "available": true,
+          "value": "20GB"
+        },
+        {
+          "feature": "Email accounts",
+          "available": true,
+          "value": 2
+        },
+        {
+          "feature": "FTP",
+          "available": true,
+          "value": 2
+        },
+        {
+          "feature": "SSL Certificate",
+          "available": true,
+          "value": 2
+        },
+        {
+          "feature": "Free Domains",
+          "available": false,
+          "value": 0
+        },
+        {
+          "feature": "Backups",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Max Team Users",
+          "available": true,
+          "value": 1
+        },
+        {
+          "feature": "Softaculous (1-Click-Installer)",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Website Builder Included",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Litespeed",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "PHP",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "WordPress",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Node JS",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Python",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Contact/Inquires",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Support",
+          "available": false,
+          "value": "False"
+        }
+      ],
+      "security": [
+        {
+          "feature": "Security",
+          "available": true,
+          "value": "Imunify360"
+        },
+        {
+          "feature": "Secure Access Manager",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Anti-DDoS Protection",
+          "available": true,
+          "value": "True"
+        }
+      ]
+    },
+    {
+      "name": "Basic",
+      "url": "https://clients.hostshifts.com/index.php?rp=/store/hosting/basic",
+      "price": 9.99,
+      "topFeatures": [
+        {
+          "feature": "Websites",
+          "available": true,
+          "value": 5
+        },
+        {
+          "feature": "Sub Websites",
+          "available": true,
+          "value": 5
+        },
+        {
+          "feature": "NVMe SSD Storage",
+          "available": true,
+          "value": "50GB"
+        },
+        {
+          "feature": "Databases",
+          "available": true,
+          "value": 10
+        },
+        {
+          "feature": "Bandwidth",
+          "available": true,
+          "value": "500GB"
+        },
+        {
+          "feature": "Email accounts",
+          "available": true,
+          "value": 10
+        },
+        {
+          "feature": "FTP",
+          "available": true,
+          "value": 10
+        },
+        {
+          "feature": "SSL Certificate",
+          "available": true,
+          "value": 10
+        },
+        {
+          "feature": "Free Domains",
+          "available": false,
+          "value": 0
+        },
+        {
+          "feature": "Backups",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Max Team Users",
+          "available": true,
+          "value": "2"
+        },
+        {
+          "feature": "Softaculous (1-Click-Installer)",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Website Builder Included",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Litespeed",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "PHP",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "WordPress",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Node JS",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Python",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Contact/Inquires",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Support",
+          "available": true,
+          "value": "True"
+        }
+      ],
+      "security": [
+        {
+          "feature": "Security",
+          "available": true,
+          "value": "Imunify360"
+        },
+        {
+          "feature": "Secure Access Manager",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Anti-DDoS Protection",
+          "available": true,
+          "value": "True"
+        }
+      ]
+    },
+    {
+        "name": "Developer",
+        "url": "https://clients.hostshifts.com/index.php?rp=/store/hosting/developer",
+        "price": 19.99,
+        "topFeatures": [
+          {
+            "feature": "Websites",
+            "available": true,
+            "value": 19
+          },
+          {
+            "feature": "Sub Websites",
+            "available": true,
+            "value": 10
+          },
+          {
+            "feature": "NVMe SSD Storage",
+            "available": true,
+            "value": "300GB"
+          },
+          {
+            "feature": "Databases",
+            "available": true,
+            "value": 20
+          },
+          {
+            "feature": "Bandwidth",
+            "available": true,
+            "value": "1TB"
+          },
+          {
+            "feature": "Email accounts",
+            "available": true,
+            "value": 50
+          },
+          {
+            "feature": "FTP",
+            "available": true,
+            "value": 20
+          },
+          {
+            "feature": "SSL Certificate",
+            "available": true,
+            "value": 20
+          },
+          {
+            "feature": "Free Domains",
+            "available": false,
+            "value": 0
+          },
+          {
+            "feature": "Backups",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Max Team Users",
+            "available": true,
+            "value": "3"
+          },
+          {
+            "feature": "Softaculous (1-Click-Installer)",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Website Builder Included",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Litespeed",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "PHP",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "WordPress",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Node JS",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Python",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Contact/Inquires",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Support",
+            "available": true,
+            "value": "True"
+          }
+        ],
+        "security": [
+          {
+            "feature": "Security",
+            "available": true,
+            "value": "Imunify360"
+          },
+          {
+            "feature": "Secure Access Manager",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Anti-DDoS Protection",
+            "available": true,
+            "value": "True"
+          }
+        ]
+      },
+    {
+      "name": "Business",
+      "url": "https://clients.hostshifts.com/index.php?rp=/store/hosting/business",
+      "price": 69.99,
+      "topFeatures": [
+        {
+          "feature": "Websites",
+          "available": true,
+          "value": 50
+        },
+        {
+          "feature": "Sub Websites",
+          "available": true,
+          "value": 50
+        },
+        {
+          "feature": "NVMe SSD Storage",
+          "available": true,
+          "value": "1TB"
+        },
+        {
+          "feature": "Databases",
+          "available": true,
+          "value": 100
+        },
+        {
+          "feature": "Bandwidth",
+          "available": true,
+          "value": "2TB"
+        },
+        {
+          "feature": "Email accounts",
+          "available": true,
+          "value": 100
+        },
+        {
+          "feature": "FTP",
+          "available": true,
+          "value": 100
+        },
+        {
+          "feature": "SSL Certificate",
+          "available": true,
+          "value": 150
+        },
+        {
+          "feature": "Free Domains",
+          "available": true,
+          "value": 1
+        },
+        {
+          "feature": "Backups",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Max Team Users",
+          "available": true,
+          "value": "4"
+        },
+        {
+          "feature": "Softaculous (1-Click-Installer)",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Website Builder Included",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Litespeed",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "PHP",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "WordPress",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Node JS",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Python",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Contact/Inquires",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Support",
+          "available": true,
+          "value": "True"
+        }
+      ],
+      "security": [
+        {
+          "feature": "Security",
+          "available": true,
+          "value": "Imunify360"
+        },
+        {
+          "feature": "Secure Access Manager",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Anti-DDoS Protection",
+          "available": true,
+          "value": "True"
+        }
+      ]
+    },
+    {
+      "name": "Professional",
+      "url": "https://clients.hostshifts.com/index.php?rp=/store/hosting/professional",
+      "price": 99.99,
+      "topFeatures": [
+        {
+          "feature": "Websites",
+          "available": true,
+          "value": 100
+        },
+        {
+          "feature": "Sub Websites",
+          "available": true,
+          "value": 100
+        },
+        {
+          "feature": "NVMe SSD Storage",
+          "available": true,
+          "value": "3TB"
+        },
+        {
+          "feature": "Databases",
+          "available": true,
+          "value": 100
+        },
+        {
+          "feature": "Bandwidth",
+          "available": true,
+          "value": "5TB"
+        },
+        {
+          "feature": "Email accounts",
+          "available": true,
+          "value": 200
+        },
+        {
+          "feature": "FTP",
+          "available": true,
+          "value": 200
+        },
+        {
+          "feature": "SSL Certificate",
+          "available": true,
+          "value": 200
+        },
+        {
+          "feature": "Free Domains",
+          "available": true,
+          "value": 1
+        },
+        {
+          "feature": "Backups",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Max Team Users",
+          "available": true,
+          "value": "5"
+        },
+        {
+          "feature": "Softaculous (1-Click-Installer)",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Website Builder Included",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Litespeed",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "PHP",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "WordPress",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Node JS",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Python",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Contact/Inquires",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Support",
+          "available": true,
+          "value": "True"
+        }
+      ],
+      "security": [
+        {
+          "feature": "Security",
+          "available": true,
+          "value": "Imunify360"
+        },
+        {
+          "feature": "Secure Access Manager",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Anti-DDoS Protection",
+          "available": true,
+          "value": "True"
+        }
+      ]
+    },
+    {
+      "name": "Enterprise",
+      "url": "https://clients.hostshifts.com/index.php?rp=/store/hosting/enterprise",
+      "price": 99.99,
+      "topFeatures": [
+        {
+          "feature": "Websites",
+          "available": true,
+          "value": 200
+        },
+        {
+          "feature": "Sub Websites",
+          "available": true,
+          "value": "Unlimited"
+        },
+        {
+          "feature": "NVMe SSD Storage",
+          "available": true,
+          "value": "Unlimited"
+        },
+        {
+          "feature": "Databases",
+          "available": true,
+          "value": "Unlimited"
+        },
+        {
+          "feature": "Bandwidth",
+          "available": true,
+          "value": "Unlimited"
+        },
+        {
+          "feature": "Email accounts",
+          "available": true,
+          "value": "Unlimited"
+        },
+        {
+          "feature": "FTP",
+          "available": true,
+          "value": "Unlimited"
+        },
+        {
+          "feature": "SSL Certificate",
+          "available": true,
+          "value": "Unlimited"
+        },
+        {
+          "feature": "Free Domains",
+          "available": true,
+          "value": 1
+        },
+        {
+          "feature": "Backups",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Max Team Users",
+          "available": true,
+          "value": "6"
+        },
+        {
+          "feature": "Softaculous (1-Click-Installer)",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Website Builder Included",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Litespeed",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "PHP",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "WordPress",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Node JS",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Python",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Contact/Inquires",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Support",
+          "available": true,
+          "value": "True"
+        }
+      ],
+      "security": [
+        {
+          "feature": "Security",
+          "available": true,
+          "value": "Imunify360"
+        },
+        {
+          "feature": "Secure Access Manager",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Anti-DDoS Protection",
+          "available": true,
+          "value": "True"
+        }
+      ]
+    }
+  ]

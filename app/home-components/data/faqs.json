@@ -1,0 +1,31 @@
+[
+    {
+      "question": "How do I choose the right hosting plan for my needs?",
+      "answer":
+        "Selecting the right hosting plan depends on factors such as the size and purpose of your website, expected traffic, and growth projections. Our platform offers a variety of plans tailored to different requirements. Explore our detailed plan descriptions, or reach out to our support team for personalized guidance."
+    },
+  
+    {
+      "question":
+        "What security measures are in place to protect my website and data?",
+      "answer":
+        "We prioritize the security of your website and data. Our platform employs advanced security measures, including SSL encryption, regular security audits, firewall protection, and DDoS mitigation. Rest assured that your online presence is safeguarded against potential threat.    "
+    },
+    {
+      "question": "Can I upgrade or downgrade my hosting plan as my needs change?",
+      "answer":
+        "Absolutely. We understand that your hosting needs may evolve. Our platform allows for seamless plan upgrades or downgrades. Whether you're experiencing growth or looking to adjust resources, our flexible options ensure that you only pay for what you need."
+    },
+    {
+      "question":
+        "How does your platform handle website backups and data recovery?    ",
+      "answer":
+        "Your website's data is of utmost importance to us. We perform regular automated backups to secure your information. In the event of data loss or security incidents, our robust backup system allows for quick and efficient data recovery, ensuring minimal disruption to your online presence."
+    },
+    {
+      "question":
+        "What level of customer support can I expect, and how can I reach your support team?      ",
+      "answer":
+        "We take pride in our 24/7 customer support. Our team is readily available to assist you with any inquiries or concerns. You can reach our support team through various channels, including live chat, email, and phone. Expect prompt and knowledgeable assistance to ensure a smooth hosting experience."
+    }
+  ]

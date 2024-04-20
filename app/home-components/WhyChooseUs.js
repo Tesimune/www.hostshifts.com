@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Card from "./Card";
-import { useTheme } from "../Contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
 
 // Images
 import CustomerSupport from "@/public/images/customer-support.png";

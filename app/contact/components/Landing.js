@@ -1,5 +1,5 @@
 "use client";
-import { useTheme } from "@/app/Contexts/ThemeContext";
+import { useTheme } from "@/app/contexts/ThemeContext";
 
 export default function Landing() {
   const { theme } = useTheme();

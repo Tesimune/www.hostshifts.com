@@ -1,10 +1,10 @@
 "use client";
 import { useEffect } from "react";
-import Footer from "../Components/LayoutComponents/Footer";
-import NavBar from "../Components/LayoutComponents/Navbar";
+import Footer from "@/components/sections/layout-components/Footer";
+import NavBar from "@/components/sections/layout-components/Navbar";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useTheme } from "../Contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
 
 export default function GuestLayout({ children }) {
   const { theme } = useTheme();
