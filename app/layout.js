@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 
 // Contexts
-import { ThemeProvider } from "./contexts/ThemeContext";
+import { ThemeProvider } from "@/lib/contexts/theme";
 
 const poppins = Poppins({
   subsets: ["latin"],

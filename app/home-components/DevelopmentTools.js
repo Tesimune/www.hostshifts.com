@@ -1,5 +1,5 @@
 "use client";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Data
 import developmentToolsData from "@/app/home-components/data/developmentTools";

@@ -1,5 +1,5 @@
 "use client";
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 export default function Landing() {
   const { theme } = useTheme();
@@ -19,7 +19,7 @@ export default function Landing() {
             theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
-          Have Inquiries? <span className="text-gold500">Let's Chat!</span>
+          Have Inquiries? <span className="text-gold500">Let&apos;s Chat!</span>
         </h1>
       </div>
     </section>

@@ -1,5 +1,5 @@
 "use client";
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 import Image from "next/image";
 import LightModeLine from "@/public/images/LightMode/Home/line.svg";
 import DarkModeLine from "@/public/images/DarkMode/Home/line.svg";

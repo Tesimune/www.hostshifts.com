@@ -1,7 +1,7 @@
 "use client";
 
 //Context
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

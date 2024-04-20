@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Images
 import Image from "next/image";
@@ -28,7 +28,7 @@ export default function Landing() {
             theme === "Light" ? "text-gray300" : "text-white"
           }`}
         >
-          Crafting Tomorrow's Digital{" "}
+          Crafting Tomorrow&apos;s Digital{" "}
           <span className="text-gold500">Ecosystem</span> Today
         </h1>
         <p

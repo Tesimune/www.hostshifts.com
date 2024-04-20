@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Card from "./Card";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Data
 import faqsData from "./data/faqs";
@@ -49,6 +49,7 @@ export default function FreequentlyAskedQuestion() {
           {faqsData.map((item) => {
             return (
               <Accordion
+                key={item.question}
                 type="single"
                 collapsible
                 className={`bg-transparent rounded-3xl border ${
@@ -61,6 +62,7 @@ export default function FreequentlyAskedQuestion() {
                   >
                     <div className="flex items-center w-max gap-4">
                       <Image
+                        alt="Pencil Icon"
                         src={
                           theme === "Light" ? LightModePencil : DarkModePencil
                         }

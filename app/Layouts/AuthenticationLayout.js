@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Images
 import LightThemeLogo from "@/public/images/LightMode/logo.png";

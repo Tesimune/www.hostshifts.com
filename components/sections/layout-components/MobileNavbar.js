@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 //Context
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Images
 import LightThemeLogo from "@/public/images/LightMode/logo.png";

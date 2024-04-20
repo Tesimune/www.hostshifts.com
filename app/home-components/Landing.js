@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 import LineSection from "@/components/sections/layout-components/LineSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -49,8 +49,8 @@ export default function Landing() {
           >
             Engineered for speed, ensuring lightning-fast loading times and
             optimal website performance. Experience the difference with our
-            cutting-edge infrastructure designed to meet the demands of today's
-            digital landscape.
+            cutting-edge infrastructure designed to meet the demands of
+            today&apos;s digital landscape.
           </p>
           <div className="flex w-full justify-center z-40 items-center mt-5">
             <form

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { storeSubMenuLinks } from "../NavlinksData";
 
 //Contexts
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

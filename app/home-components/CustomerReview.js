@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Data
 import customerReviewData from "./data/customerReview";

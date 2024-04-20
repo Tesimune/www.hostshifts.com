@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 import { usePathname } from "next/navigation";

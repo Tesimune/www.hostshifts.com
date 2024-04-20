@@ -4,7 +4,7 @@ import Footer from "@/components/sections/layout-components/Footer";
 import NavBar from "@/components/sections/layout-components/Navbar";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 export default function GuestLayout({ children }) {
   const { theme } = useTheme();

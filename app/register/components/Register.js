@@ -1,7 +1,6 @@
 "use client";
-import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +8,6 @@ import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import { faLock, faSignature } from "@fortawesome/free-solid-svg-icons";
 
 export default function RegisterComponent() {
-  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,7 +15,7 @@ export default function RegisterComponent() {
   const { theme } = useTheme();
 
   useEffect(() => {
-    router.push("https://clients.hostshifts.com/register.php");
+    window.location.href = "https://clients.hostshifts.com/register.php";
   }, []);
 
   return (

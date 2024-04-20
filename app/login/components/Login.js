@@ -1,5 +1,4 @@
 "use client";
-import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -13,7 +12,6 @@ import {
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 
 export default function LoginComponent() {
-  const router = useRouter();
   const [passwordType, setPasswordType] = useState("password");
 
   const togglePasswordType = () => {
@@ -21,7 +19,7 @@ export default function LoginComponent() {
   };
 
   useEffect(() => {
-    router.push("https://clients.hostshifts.com/login");
+    window.location.href = "https://clients.hostshifts.com/login";
   }, []);
 
   return (

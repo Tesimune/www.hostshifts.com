@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 //Context
-import { useTheme } from "@/app/contexts/ThemeContext";
+import { useTheme } from "@/lib/contexts/theme";
 
 //Images
 import LightThemeLogo from "@/public/images/LightMode/logo.png";
@@ -50,7 +50,7 @@ export default function DesktopNavbar() {
               >
                 <ul className=" grid w-[400px] gap-2 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {storeSubMenuLinks.map((component) => (
-                    <li>
+                    <li key={component.name}>
                       <NavigationMenuLink asChild>
                         <a
                           className={cn(
