@@ -1,4 +1,4 @@
-import GuestLayout from "./layouts/GuestLayout";
+import GuestLayout from "@/components/layouts/GuestLayout";
 
 // Sections
 import Landing from "./home-components/Landing";

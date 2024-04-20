@@ -1,4 +1,4 @@
-import GuestLayout from "../layouts/GuestLayout";
+import GuestLayout from "@/components/layouts/GuestLayout";
 import Landing from "./components/Landing";
 
 export default function Page() {
