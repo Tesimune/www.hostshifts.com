@@ -95,6 +95,11 @@
           "value": "True"
         },
         {
+          "feature": "Terminal",
+          "available": false,
+          "value": "False"
+        },
+        {
           "feature": "Contact/Inquires",
           "available": true,
           "value": "True"
@@ -219,6 +224,11 @@
           "value": "True"
         },
         {
+          "feature": "Terminal",
+          "available": false,
+          "value": "False"
+        },
+        {
           "feature": "Contact/Inquires",
           "available": true,
           "value": "True"
@@ -339,6 +349,11 @@
           },
           {
             "feature": "Python",
+            "available": true,
+            "value": "True"
+          },
+          {
+            "feature": "Terminal",
             "available": true,
             "value": "True"
           },
@@ -467,6 +482,11 @@
           "value": "True"
         },
         {
+          "feature": "Terminal",
+          "available": true,
+          "value": "True"
+        },
+        {
           "feature": "Contact/Inquires",
           "available": true,
           "value": "True"
@@ -591,6 +611,11 @@
           "value": "True"
         },
         {
+          "feature": "Terminal",
+          "available": true,
+          "value": "True"
+        },
+        {
           "feature": "Contact/Inquires",
           "available": true,
           "value": "True"
@@ -711,6 +736,11 @@
         },
         {
           "feature": "Python",
+          "available": true,
+          "value": "True"
+        },
+        {
+          "feature": "Terminal",
           "available": true,
           "value": "True"
         },
